@@ -1,220 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HTML Academy: Пинк / фото</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-  <header class="page-header  page-header--bg-position">
-    <div class="page-header__inner">
-      <div class="page-header__logo">
-        <a href="#" class="page-header__logo-link">
-          <svg></svg>
-        </a>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML Academy: Пинк / фото</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="page-header  page-header--bg-position">
+      <div class="page-header__inner">
+        <div class="page-header__logo">
+          <a href="#" class="page-header__logo-link">
+            <svg></svg>
+          </a>
+        </div>
+        <nav class="main-nav  main-nav--opened">
+          <button class="main-nav__toggler  main-nav__toggler--close" type="button"
+                  id="navToggler"></button>
+          <ul class="main-nav__list  main-nav__list--opened" id="mainNav">
+            <li class="main-nav__item">
+              <a href="">Главная</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--active">
+              <a>Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="">HMTL Academy</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="page-header__title">
+          Фотографии пользователей
+        </h1>
       </div>
-      <nav class="main-nav  main-nav--opened">
-        <button class="main-nav__toggler  main-nav__toggler--close" type="button" id="navToggler"></button>
-        <ul class="main-nav__list  main-nav__list--opened" id="mainNav">
-          <li class="main-nav__item">
-            <a href="">Главная</a>
-          </li>
-          <li class="main-nav__item  main-nav__item--active">
-            <a>Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="">HMTL Academy</a>
-          </li>
-        </ul>
-      </nav>
-      <h1 class="page-header__title">
-        Фотографии пользователей
-      </h1>
-    </div>
-  </header>
-  <div class="main">
-    <p class="additional-text">
-      Взгляните на фотографии, которые выкладывают пользователи!
-      <br>Видите, как не хватает ваших?
-    </p>
-    <section class="photo-panarama">
-      <div class="photos__image  photos__image--panarama" data-title="ПАНОРАМА ДНЯ">
-        <img class="photos__image" src="http://placehold.it/320x137" alt="" width="320" height="137">
-      </div>
-      <div class="photos__item">
-        <div class="photos__content">
-          <div class="photos__author">Анна <span class="photos__timer">(<span class="photos__time">5 минут</span> назад)</span>
-          </div>
-          <div class="photos__description">
-            Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-          </div>
-          <div class="photos__like">
-            Нравится: <span class="photos__like-count">215</span>
+    </header>
+    <div class="main">
+      <p class="additional-text">
+        Взгляните на фотографии, которые выкладывают пользователи!
+        <br>Видите, как не хватает ваших?
+      </p>
+      <section class="photo-panarama">
+        <div class="photos__image  photos__image--panarama" data-title="ПАНОРАМА ДНЯ">
+          <img class="photos__image" src="http://placehold.it/320x137" alt="" width="320" height="137">
+        </div>
+        <div class="photos__item">
+          <div class="photos__content">
+            <div class="photos__author">Анна <span class="photos__timer">(<span class="photos__time">5 минут</span> назад)</span>
+            </div>
+            <div class="photos__description">
+              Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в
+              перископе, задавайте свои вопросы!
+            </div>
+            <div class="photos__like">
+              Нравится: <span class="photos__like-count">215</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="photos">
-      <div class="photos__inner">
-        <ul class="photos__list">
-          <li class="photos__item">
-            <div class="photos__image">
-              <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280" height="180">
-            </div>
-            <div class="photos__content">
-              <div class="photos__author">Левон <span class="photos__timer">(<span class="photos__time">5 часов</span> назад)</span>
+      </section>
+      <section class="photos">
+        <div class="photos__inner">
+          <ul class="photos__list">
+            <li class="photos__item">
+              <div class="photos__image">
+                <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280"
+                     height="180">
               </div>
-              <div class="photos__description">
-                Вчера он на луну летал, сегодня в руки к нам попал.
+              <div class="photos__content">
+                <div class="photos__author">Левон <span class="photos__timer">(<span
+                  class="photos__time">5 часов</span> назад)</span>
+                </div>
+                <div class="photos__description">
+                  Вчера он на луну летал, сегодня в руки к нам попал.
+                </div>
+                <div class="photos__like">
+                  Нравится: <span class="photos__like-count">356</span>
+                </div>
               </div>
-              <div class="photos__like">
-                Нравится: <span class="photos__like-count">356</span>
-              </div>
-            </div>
-          </li>
-          <li class="photos__item">
-            <div class="photos__image">
-              <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280" height="180">
-            </div>
-            <div class="photos__content">
-              <div class="photos__author">Антон <span class="photos__timer">(<span class="photos__time">12 часов</span> назад)</span>
-              </div>
-              <div class="photos__description">
-                Соседи будут рады!
-              </div>
-              <div class="photos__like">
-                Нравится: <span class="photos__like-count">666</span>
-              </div>
-            </div>
-          </li>
-          <li class="photos__item">
-            <div class="photos__image">
-              <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280" height="180">
-            </div>
-            <div class="photos__content">
-              <div class="photos__author">Борис <span class="photos__timer">(<span class="photos__time">20 часов</span> назад)</span>
-              </div>
-              <div class="photos__description">
-                Здесь могла быть ваша цитата о высоком и вечном.
-              </div>
-              <div class="photos__like">
-                Нравится: <span class="photos__like-count">215</span>
-              </div>
-            </div>
-          </li>
-          <li class="photos__item">
-            <div class="photos__image">
-              <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280" height="180">
-            </div>
-            <div class="photos__content">
-              <div class="photos__author">Сергей <span class="photos__timer">(<span class="photos__time">25 часов</span> назад)</span>
-              </div>
-              <div class="photos__description">
-                Самая кубанская в мире!
-              </div>
-              <div class="photos__like">
-                Нравится: <span class="photos__like-count">4</span>
-              </div>
-            </div>
-          </li>
-          <li class="photos__item">
-            <div class="photos__image">
-              <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280" height="180">
-            </div>
-            <div class="photos__content">
-              <div class="photos__author">Максим <span class="photos__timer">(<span class="photos__time">40 часов</span> назад)</span>
-              </div>
-              <div class="photos__description">
-                Где снег-то?
-              </div>
-              <div class="photos__like">
-                Нравится: <span class="photos__like-count">150</span>
-              </div>
-            </div>
-          </li>
-          <li class="photos__item">
-            <div class="photos__image">
-              <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280" height="180">
-            </div>
-            <div class="photos__content">
-              <div class="photos__author">Надежда <span class="photos__timer">(<span class="photos__time">45 часов</span> назад)</span>
-              </div>
-              <div class="photos__description">
-                Всем GM и взаимные лайки!
-              </div>
-              <div class="photos__like">
-                Нравится: <span class="photos__like-count">256</span>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <p class="additional-text">
-      Затмите их всех!
-      <br>Выкладывайте все, что накопилось в телефоне!
-    </p>
-    <form class="form-post" action="" method="post" name="form-post">
-      <div class="form__section  form__section--gray">
-        <div class="form__item">
-          <label for="" class="form-post__load-file">
-            <input class="form__input" type="file" name="new_photo" id="newPhoto">
-          </label>
-        </div>
-        <div class="form__item">
-          <ul class="input-list  input-list--line">
-            <li class="input-list__item  input-list__item--line">
-              <input class="form-post__input--radio" type="radio" name="correct" valur="crop" id="crop" checked>
-              <label class="form-post__label form-post__label--crop" for="crop"></label>
             </li>
-            <li class="input-list__item  input-list__item--line">
-              <input class="form-post__input--radio" type="radio" name="correct" valur="brightness" id="brightness">
-              <label class="form-post__label form-post__label--crop" for="brightness"></label>
+            <li class="photos__item">
+              <div class="photos__image">
+                <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280"
+                     height="180">
+              </div>
+              <div class="photos__content">
+                <div class="photos__author">Антон <span class="photos__timer">(<span
+                  class="photos__time">12 часов</span> назад)</span>
+                </div>
+                <div class="photos__description">
+                  Соседи будут рады!
+                </div>
+                <div class="photos__like">
+                  Нравится: <span class="photos__like-count">666</span>
+                </div>
+              </div>
             </li>
-            <li class="input-list__item  input-list__item--line">
-              <input class="form-post__input--radio" type="radio" name="correct" valur="contarst" id="contarst">
-              <label class="form-post__label form-post__label--crop" for="contarst"></label>
+            <li class="photos__item">
+              <div class="photos__image">
+                <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280"
+                     height="180">
+              </div>
+              <div class="photos__content">
+                <div class="photos__author">Борис <span class="photos__timer">(<span
+                  class="photos__time">20 часов</span> назад)</span>
+                </div>
+                <div class="photos__description">
+                  Здесь могла быть ваша цитата о высоком и вечном.
+                </div>
+                <div class="photos__like">
+                  Нравится: <span class="photos__like-count">215</span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <div class="photos__image">
+                <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280"
+                     height="180">
+              </div>
+              <div class="photos__content">
+                <div class="photos__author">Сергей <span class="photos__timer">(<span
+                  class="photos__time">25 часов</span> назад)</span>
+                </div>
+                <div class="photos__description">
+                  Самая кубанская в мире!
+                </div>
+                <div class="photos__like">
+                  Нравится: <span class="photos__like-count">4</span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <div class="photos__image">
+                <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280"
+                     height="180">
+              </div>
+              <div class="photos__content">
+                <div class="photos__author">Максим <span class="photos__timer">(<span
+                  class="photos__time">40 часов</span> назад)</span>
+                </div>
+                <div class="photos__description">
+                  Где снег-то?
+                </div>
+                <div class="photos__like">
+                  Нравится: <span class="photos__like-count">150</span>
+                </div>
+              </div>
+            </li>
+            <li class="photos__item">
+              <div class="photos__image">
+                <img class="photos__image" src="http://placehold.it/280x180" alt="" width="280"
+                     height="180">
+              </div>
+              <div class="photos__content">
+                <div class="photos__author">Надежда <span class="photos__timer">(<span
+                  class="photos__time">45 часов</span> назад)</span>
+                </div>
+                <div class="photos__description">
+                  Всем GM и взаимные лайки!
+                </div>
+                <div class="photos__like">
+                  Нравится: <span class="photos__like-count">256</span>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
-        <div class="form__item">
-          <div class="scale-slider">
-            <div class="scale-slider__line">
-              <span class="scale-slider__point"></span>
-            </div>
+      </section>
+      <p class="additional-text">
+        Затмите их всех!
+        <br>Выкладывайте все, что накопилось в телефоне!
+      </p>
+      <form class="form-post" action="" method="post" name="form-post">
+        <div class="form__section  form__section--gray">
+          <div class="form__item">
+            <label for="" class="form-post__load-file">
+              <input class="form__input" type="file" name="new_photo" id="newPhoto">
+            </label>
           </div>
+          <div class="form__item">
+            <ul class="input-list  input-list--line">
+              <li class="input-list__item  input-list__item--line">
+                <input class="form-post__input--radio" type="radio" name="correct" valur="crop"
+                       id="crop" checked>
+                <label class="form-post__label form-post__label--crop" for="crop"></label>
+              </li>
+              <li class="input-list__item  input-list__item--line">
+                <input class="form-post__input--radio" type="radio" name="correct" valur="brightness"
+                       id="brightness">
+                <label class="form-post__label form-post__label--crop" for="brightness"></label>
+              </li>
+              <li class="input-list__item  input-list__item--line">
+                <input class="form-post__input--radio" type="radio" name="correct" valur="contarst"
+                       id="contarst">
+                <label class="form-post__label form-post__label--crop" for="contarst"></label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__item">
+            <div class="scale-slider">
+              <div class="scale-slider__line">
+                <span class="scale-slider__point"></span>
+              </div>
+            </div>
 
+          </div>
+          <div class="form__submit">
+            <button class="btn btn--post" type="submit">Запостить</button>
+            <button class="btn btn--reset" type="reset">Отмена</button>
+          </div>
         </div>
-        <div class="form__submit">
-          <button class="btn btn--post" type="submit">Запостить</button>
-          <button class="btn btn--reset" type="reset">Отмена</button>
-        </div>
-      </div>
-    </form>
-  </div>
-  <footer class="page-footer">
-    <div class="page-footer__inner">
-      <div class="page-footer__logo">
-        <svg></svg>
-      </div>
-      <div class="page-footer__social">
-      <span class="social-links">
-          <a class="social-link social-link--vk" href="" target="_blank" rel="noopener noreferrer">
-          </a>
-          <a class="social-link social-link--facebook" href="" target="_blank" rel="noopener noreferrer">
-          </a>
-          <a class="social-link social-link--youtube" href="" target="_blank" rel="noopener noreferrer">
-          </a>
-      </span>
-      </div>
-      <div class="page-footer__copyright">
-        Разработано
-        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer"></a>
-      </div>
+      </form>
     </div>
-  </footer>
-</body>
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__logo">
+          <svg></svg>
+        </div>
+        <div class="page-footer__social">
+              <span class="social-links">
+                  <a class="social-link social-link--vk" href="" target="_blank"
+                     rel="noopener noreferrer">
+                  </a>
+                  <a class="social-link social-link--facebook" href="" target="_blank"
+                     rel="noopener noreferrer">
+                  </a>
+                  <a class="social-link social-link--youtube" href="" target="_blank"
+                     rel="noopener noreferrer">
+                  </a>
+              </span>
+        </div>
+        <div class="page-footer__copyright">
+          Разработано
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"
+             target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
