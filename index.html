@@ -3,10 +3,199 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header  page-header--bg-position">
+      <div class="page-header__inner">
+        <h1 class="visually-hidden">Pink &mdash; крутые фото</h1>
+        <div class="page-header__logo">
+          <a href="" class="page-header__logo-link">
+            <svg></svg>
+          </a>
+        </div>
+        <nav class="main-nav  main-nav--opened">
+          <button class="main-nav__toggler  main-nav__toggler--close" type="button" id="navToggler"></button>
+          <ul class="main-nav__list  main-nav__list--opened" id="mainNav">
+            <li class="main-nav__item  main-nav__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="">HMTL Academy</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="promo-hand"></div>
+        <div class="applications">
+          <a class="btn btn--applications-load" href="">Скачать приложение</a>
+          <ul class="applications__list">
+            <li class="applications__item">
+              <a href="" class="applications__link  applications__link--mac">Mac</a>
+            </li>
+            <li class="applications__item">
+              <a href="" class="applications__link  applications__link--android">Android</a>
+            </li>
+            <li class="applications__item">
+              <a href="" class="applications__link  applications__link--windows">Windows</a>
+            </li>
+          </ul>
+          <p class="applications__text">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <section class="information">
+        <div class="information__inner">
+          <div class="information__introduction">
+            <p>
+              Устали от серости мегаполиса?
+            </p>
+            <p>
+              Нам есть, что вам предложить!
+            </p>
+          </div>
+          <ul class="information__list">
+            <li class="information__item">
+              <h2 class="information__title">Поднимает настроение</h2>
+              <p>
+                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+              </p>
+            </li>
+            <li class="information__item">
+              <h2 class="information__title">Меняет мир вокруг</h2>
+              <p>
+                Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+              </p>
+            </li>
+            <li class="information__item">
+              <h2 class="information__title">Заводит новых друзей</h2>
+              <p>
+                Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="reviews__inner">
+          <ul class="reviews__content  slider">
+            <li class="slider__item">
+              <h2 class="reviews__author">Николай Петров</h2>
+              <p class="reviews__text">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </li>
+          </ul>
+          <div class="slider__toggles">
+            <i class="slider__toggle  slider__toggle--active"></i>
+            <i class="slider__toggle"></i>
+            <i class="slider__toggle"></i>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <div class="price__inner">
+          <div class="slider  price__content">
+            <table class="price__table">
+              <tr>
+                <th class="slider__item  price__name">
+                  <span class="price__name-title">Стандарт</span>
+                  <div class="price__count">3,99 <span class="price__currency"></span></div>
+                </th>
+                <th class="slider__item  price__name  price__name--hit">
+                  <span class="price__name-title">Стандарт</span>
+                  <div class="price__count">3,99 <span class="price__currency"></span></div>
+                </th>
+                <th class="slider__item  price__name">
+                  <span class="price__name-title">Стандарт</span>
+                  <div class="price__count">3,99 <span class="price__currency"></span></div>
+                </th>
+              </tr>
+              <tr>
+                <td class="price__option  price__option--on">
+                  Розовый фильтр
+                </td>
+                <td class="price__option  price__option--on">
+                  Розовый фильтр
+                </td>
+                <td class="price__option  price__option--on">
+                  Розовый фильтр
+                </td>
+              </tr>
+              <tr>
+                <td class="price__option  price__option--on">
+                  Смайлики
+                </td>
+                <td class="price__option  price__option--on">
+                  Смайлики
+                </td>
+                <td class="price__option  price__option--on">
+                  Смайлики
+                </td>
+              </tr>
+              <tr>
+                <td class="price__option  price__option--off">
+                  Комментарии
+                </td>
+                <td class="price__option  price__option--off">
+                  Комментарии
+                </td>
+                <td class="price__option  price__option--off">
+                  Комментарии
+                </td>
+              </tr>
+            </table>
+            <div class="slider__toggles">
+              <i class="slider__toggle"></i>
+              <i class="slider__toggle  slider__toggle--active"></i>
+              <i class="slider__toggle"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__inner">
+          <div class="contacts__title">
+            Остались вопросы?
+            <br> Свяжитесь с нами!
+          </div>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <div class="contacts__name">
+                Звоните:
+              </div>
+              <a href="tel:+78125556666" class="contacts__link">+7 (812) 555-66-66</a>
+            </li>
+            <li class="contacts__item">
+              <div class="contacts__name">
+                Пишите:
+              </div>
+              <a href="mailto:mail@htmlacademy.ru" class="contacts__link">mail@htmlacademy.ru</a>
+            </li>
+            <li class="contacts__item">
+              <div class="contacts__name">
+                Приезжайте в гости:
+              </div>
+              <a href="map.html" class="contacts__link">ул. Большая Конюшенная, 19/8</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="map">
+        <div class="map__inner">
+          <a href="" class="map__link">
+            <img src="http://placehold.it/320x200" alt="" width="320" height="200">
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
