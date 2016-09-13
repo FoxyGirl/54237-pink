@@ -1,0 +1,37 @@
+.page-header {
+  text-align: center;
+  color: $light-color;
+  background: #1d2631 url("../../img/bg-back-mobile@1x.jpg") top center no-repeat;
+
+  &--bg-position {
+    background-position: center 255px;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__logo {
+    position: absolute;
+    top: $indent-help;
+    left: $indent-help;
+
+    &-link {
+      display: block;
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: $pink-color;
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding: 30px 40px 50px;
+    font-size: 24px;
+    font-weight: 200;
+  }
+}
