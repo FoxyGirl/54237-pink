@@ -1,0 +1,130 @@
+.form {
+  &__section {
+    padding: $indent-help;
+
+    &--gray {
+      background-color: $light-gray-color;
+    }
+  }
+  &__section {
+    padding-top: $indent-help;
+    padding-bottom: $indent-help;
+  }
+  &__title {
+    font-weight: normal;
+    text-align: center;
+  }
+  &__label {
+    display: block;
+    margin: 10px;
+    text-transform: uppercase;
+    color: $pink-color;
+
+    &--center {
+      text-align: center;
+    }
+
+    &--control-text {
+      text-transform: none;
+      font-size: 18px;
+      color: $brand-color;
+    }
+
+    &--checkbox {
+      position: relative;
+      padding-left: 68px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      input[type="checkbox"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+
+        & + span {
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            width: 35px;
+            height: 35px;
+            border: 2px solid $gray-color;
+            background-color: $light-color;
+          }
+        }
+
+        &:checked + span {
+          &:before {
+            background: $light-color url('../img/facebook.svg') center center no-repeat;
+          }
+        }
+      }
+    }
+
+    &--radio {
+      position: relative;
+      padding-left: 68px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      input[type="radio"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+
+        & + span {
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 2px solid $gray-color;
+            background-color: $light-color;
+          }
+        }
+
+        &:checked + span {
+          &:before {
+            background: $light-color url('../img/twitter.svg') center center no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: $pink-color;
+    text-align: center;
+  }
+
+  &__submit {
+    text-align: center;
+  }
+
+  &__info {
+    text-transform: uppercase;
+
+    span {
+      color: $pink-color;
+    }
+  }
+}
+
+

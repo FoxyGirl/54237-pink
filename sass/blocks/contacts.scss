@@ -1,0 +1,35 @@
+.contacts {
+  text-align: center;
+
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-right: $indent-help;
+    padding-left: $indent-help;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: $line-height;
+  }
+
+  &__list {
+    @include ul-clear;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__link {
+    font-size: 24px;
+    font-weight: 300;
+    text-decoration: none;
+    color: $pink-color;
+  }
+}

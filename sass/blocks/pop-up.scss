@@ -1,0 +1,27 @@
+.pop-up {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto 30px;
+  text-align: center;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.25);
+
+  &__inner {
+    padding: $indent-help;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__content {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: $line-height;
+  }
+  &__button-block {
+    padding-top: 30px;
+
+    &--gray {
+      background-color: $light-gray-color;
+    }
+  }
+}

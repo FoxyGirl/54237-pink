@@ -1,0 +1,22 @@
+.reviews {
+  &__inner {
+    margin-right: $indent-help;
+    margin-left: $indent-help;
+  }
+
+  &__content {
+    @include ul-clear;
+    text-align: center;
+  }
+
+  &__author {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: $line-height;
+  }
+}

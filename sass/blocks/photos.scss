@@ -1,0 +1,68 @@
+.photos {
+  &__inner {
+
+  }
+  &__list {
+    @include ul-clear
+  }
+
+  &__item {
+    margin-right: $indent-help;
+    margin-left: $indent-help;
+    margin-bottom: $indent-help;
+    background-color: $light-gray-color;
+
+    &--panorama {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    font-size: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &--panorama {
+      position: relative;
+
+      &::after {
+        content: attr(data-title);
+        position: absolute;
+        top: 0;
+        right: $indent-help;
+        padding: 10px 25px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $light-color;
+        background-color: $pink-color;
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  &__author {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  &__timer {
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    line-height: $line-height;;
+    margin-bottom: 20px;
+  }
+
+  &__like {
+    color: $pink-color;
+  }
+}

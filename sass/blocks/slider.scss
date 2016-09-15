@@ -1,0 +1,26 @@
+.slider {
+  position: relative;
+
+  &__item {
+    width: 100%;
+  }
+
+  &__toggles {
+    text-align: center;
+  }
+
+  &__toggle {
+    display: inline-block;
+    vertical-align: top;
+    width: 7px;
+    height: 7px;
+    margin: 10px;
+    background-color: $gray-color;
+    border: 3px $light-color solid;
+    border-radius: 50%;
+
+    &--active {
+      border-color: #000;
+    }
+  }
+}

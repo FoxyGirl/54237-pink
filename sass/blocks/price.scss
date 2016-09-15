@@ -1,0 +1,33 @@
+.price {
+  background-color: $light-gray-color;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 600px;
+  }
+
+  &__item {
+    min-width: 280px;
+  }
+
+  &__option {
+    padding: 20px;
+    border: 1px solid red;
+  }
+
+  &__name {
+    padding: 20px;
+    border: 1px solid red;
+  }
+}
