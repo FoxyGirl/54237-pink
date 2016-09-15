@@ -11,3 +11,24 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin border($width: 1px, $type: solid, $color: #000) {
+  border: $width $type $color;
+}
+
+@mixin border-table() {
+  @include border(2px, solid, #e5e5e5);
+}
+
+@mixin placeholder-color($color: red) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+

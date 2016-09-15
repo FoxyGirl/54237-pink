@@ -1,0 +1,15 @@
+.input-list {
+  @include ul-clear;
+
+  &--line {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    &--line {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}

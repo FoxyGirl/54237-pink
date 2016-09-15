@@ -16,7 +16,8 @@
   outline: none;
 
   &--submit {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    padding: 15px;
     text-transform: uppercase;
     color: $light-color;
     background-color: $green-color;
@@ -25,11 +26,17 @@
   }
 
   &--post {
+    margin-bottom: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     color: $pink-color;
     border-color: $pink-color;
   }
 
   &--reset {
+    margin-bottom: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     color: $brand-color;
     border-color: $brand-color;
     opacity: 0.1;

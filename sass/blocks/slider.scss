@@ -1,11 +1,14 @@
 .slider {
   position: relative;
+  overflow: hidden;
 
   &__item {
+    position: absolute;
     width: 100%;
   }
 
   &__toggles {
+    padding: 10px;
     text-align: center;
   }
 
@@ -14,7 +17,7 @@
     vertical-align: top;
     width: 7px;
     height: 7px;
-    margin: 10px;
+    margin: 10px 5px;
     background-color: $gray-color;
     border: 3px $light-color solid;
     border-radius: 50%;

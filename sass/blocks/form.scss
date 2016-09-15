@@ -1,22 +1,31 @@
 .form {
   &__section {
     padding: $indent-help;
+    padding-bottom: $indent-help;
 
     &--gray {
       background-color: $light-gray-color;
     }
   }
-  &__section {
-    padding-top: $indent-help;
-    padding-bottom: $indent-help;
+
+  &__item {
+    display: block;
   }
+
   &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    font-size: $font-size-base;
     font-weight: normal;
     text-align: center;
+    line-height: $line-height;
   }
   &__label {
     display: block;
     margin: 10px;
+    margin-bottom: 12px;
+    padding-left: 10px;
     text-transform: uppercase;
     color: $pink-color;
 
@@ -32,6 +41,7 @@
 
     &--checkbox {
       position: relative;
+      margin: 0 0 38px;
       padding-left: 68px;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -58,7 +68,7 @@
 
         &:checked + span {
           &:before {
-            background: $light-color url('../img/facebook.svg') center center no-repeat;
+            background: $light-color url('../../img/icon-yes.svg') center center no-repeat;
           }
         }
       }
@@ -66,6 +76,7 @@
 
     &--radio {
       position: relative;
+      margin: 0 0 30px;
       padding-left: 68px;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -92,8 +103,8 @@
         }
 
         &:checked + span {
-          &:before {
-            background: $light-color url('../img/twitter.svg') center center no-repeat;
+          &::before {
+            background: $light-color url('../../img/icon-map-marker.svg') center center no-repeat;
           }
         }
       }
@@ -104,10 +115,13 @@
     display: block;
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 17px 20px;
+    margin-bottom: 23px;
   }
   &__text {
+    margin-bottom: 36px;
+    padding: 0 $indent-help;
+    font-size: $font-size-base;
     font-weight: normal;
     text-transform: uppercase;
     color: $pink-color;
@@ -125,6 +139,20 @@
       color: $pink-color;
     }
   }
+
+  input,
+  textarea {
+    @include  placeholder-color($brand-color);
+    font-size: 18px;
+  }
+
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+  }
+
 }
 
 

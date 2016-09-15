@@ -1,5 +1,7 @@
 .additional-text {
-  padding: $indent-help;
+  margin: 0;
+  padding: 45px $indent-help 45px;
   text-align: center;
   line-height: $line-height;
+  line-height: 2;
 }

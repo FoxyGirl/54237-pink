@@ -1,5 +1,6 @@
 .social {
   &-links {
+    display: inline-block;
     text-align: center;
     font-size: 0;
   }
@@ -9,7 +10,7 @@
     vertical-align: top;
     width: 45px;
     height: 45px;
-    margin-right: 15px;
+    margin: 0 8px;
     border-radius: 50%;
     border: 3px solid $gray-color;
     background: #fff url('../../img/icon-twitter.svg') center center no-repeat;

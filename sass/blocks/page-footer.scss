@@ -5,20 +5,11 @@
   &__inner {
     margin-right: $indent-help;
     margin-left: $indent-help;
+    padding-top: 25px;
   }
 
   &__logo {
-    margin-bottom: 40px;
-
-    .glasses {
-      fill: cyan;
-    }
-
-    &:hover {
-      .glasses {
-        fill: blue;
-      }
-    }
+    margin-bottom: 19px;
   }
 
   &__social {
@@ -37,6 +28,10 @@
 
       svg {
         fill: $pink-color;
+
+        &:hover {
+          fill: $brand-color;
+        }
       }
     }
   }

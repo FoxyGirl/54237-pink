@@ -1,33 +1,102 @@
 .price {
-  background-color: $light-gray-color;
-  padding-top: 30px;
+  position: relative;
+  padding-top: 60px;
   padding-bottom: 30px;
+  background-color: $light-gray-color;
 
-  &__slider {
-    position: relative;
-    width: 100%;
-    min-height: 300px;
-    overflow: hidden;
+  &--skew-up {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -20px;
+      width: 100vw;
+      height: 50px;
+      background-color: $light-gray-color;
+      transform: skewY(-5deg);
+    }
   }
 
-  &__list {
-    position: absolute;
-    top: 0;
-    left: -100px;
-    width: 600px;
+  &__content {
+    height: 350px;
   }
 
-  &__item {
-    min-width: 280px;
-  }
-
-  &__option {
-    padding: 20px;
-    border: 1px solid red;
+  &__table {
+    &--active2 {
+      position: absolute;
+      left: -260px;
+      top: 0;
+    }
   }
 
   &__name {
+    position: relative;
+    min-width: 236px;
     padding: 20px;
-    border: 1px solid red;
+    @include border-table;
+    background-color: $brand-color;
+    color: $light-color;
+
+    &-title {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: $letter-spacing;
+    }
+  }
+
+  &__count {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  &__currency {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__option {
+    position: relative;
+    padding: 20px;
+    @include border-table;
+    text-transform: uppercase;
+
+    &--on {
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        right: 15px;
+        top: 8px;
+        width: 33px;
+        height: 33px;
+        background-color: red;
+        background: transparent url("../../img/icon-yes.svg") 0 0 no-repeat;
+      }
+    }
+
+    &--off {
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        right: 15px;
+        top: 8px;
+        width: 33px;
+        height: 33px;
+        background-color: red;
+        background: transparent url("../../img/icon-no.svg") 0 0 no-repeat;
+      }
+    }
+  }
+
+  .slider__toggles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
   }
 }

@@ -2,10 +2,13 @@
   &__inner {
     margin-right: $indent-help;
     margin-left: $indent-help;
+    margin-bottom: 52px;
+    padding-top: 30px;
   }
 
   &__content {
     @include ul-clear;
+    height: 250px;
     text-align: center;
   }
 
@@ -13,10 +16,11 @@
     margin-bottom: 15px;
     font-size: 18px;
     font-weight: bold;
+    letter-spacing: $letter-spacing;
   }
 
   &__text {
     font-size: 14px;
-    line-height: $line-height;
+    line-height: $line-height + 0.4;
   }
 }

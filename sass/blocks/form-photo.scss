@@ -5,7 +5,7 @@
     overflow: hidden;
     width: 280px;
     height: 374px;
-    margin: 0 auto 20px;
+    margin: 0 auto 40px;
     background-color: #124578;
 
     input[type="file"] {
@@ -23,13 +23,25 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
-    width: 45px;
-    height: 45px;
-    margin-bottom: 15px;
-    background-color: #123456;
+    width: 50px;
+    height: 50px;
+    margin: 0 15px 4px;
+    background: transparent url("../../img/icon-editor-crop.svg") center center no-repeat;
+
+    &--crop {
+      background-image: url("../../img/icon-editor-crop.svg");
+    }
+
+    &--contrast {
+      background-image: url("../../img/icon-editor-contrast.svg");
+    }
+
+    &--fill {
+      background-image: url("../../img/icon-editor-fill.svg");
+    }
   }
   &__input--radio {
-    opacity: 0;
+    display: none;
 
     &:checked ~ label {
       background-color: yellow;

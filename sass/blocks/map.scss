@@ -1,8 +1,21 @@
 .map {
   a {
     display: block;
+    position: relative;
     width: 100%;
     height: 200px;
-    background: #fff url("../../img/bg-map-mobile@1x.png") center center no-repeat;
+    background: $gray-color url("../../img/bg-map-mobile@1x.png") center center no-repeat;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 95px;
+      left: 50%;
+      width: 36px;
+      height: 36px;
+      margin-left: -18px;
+      background: transparent url(../../img/icon-map-marker.svg) center center no-repeat;
+    }
   }
 }

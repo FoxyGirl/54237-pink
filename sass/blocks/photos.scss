@@ -9,11 +9,15 @@
   &__item {
     margin-right: $indent-help;
     margin-left: $indent-help;
-    margin-bottom: $indent-help;
+    margin-bottom: 21px;
     background-color: $light-gray-color;
 
     &--panorama {
       margin: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -33,7 +37,7 @@
         position: absolute;
         top: 0;
         right: $indent-help;
-        padding: 10px 25px;
+        padding: 10px 20px;
         font-size: 12px;
         text-transform: uppercase;
         color: $light-color;
@@ -43,8 +47,8 @@
   }
 
   &__content {
-    padding: 20px;
-    font-size: 14px;
+    padding: 20px 18px;
+    font-size: $font-size-base;
   }
 
   &__author {
@@ -58,11 +62,28 @@
   }
 
   &__description {
-    line-height: $line-height;;
-    margin-bottom: 20px;
+    line-height: $line-height - 0.1;
+    margin-bottom: 13px;
   }
 
   &__like {
+    position: relative;
+    padding-left: 34px;
+    font-size: 12px;
+    text-transform: uppercase;
     color: $pink-color;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: top;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 35px;
+      height: 35px;
+      background: transparent url("../../img/icon-heart.svg") 0 0 no-repeat;
+    }
   }
 }
+
