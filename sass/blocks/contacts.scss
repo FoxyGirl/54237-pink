@@ -2,21 +2,26 @@
   position: relative;
   text-align: center;
   border-bottom: 1px solid transparent;
-/*
-  &::after {
-    content: "";
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 105px;
-    background: red url("../../img/bg-triangle-white-footer.svg") 0 0 no-repeat;
-    background-size: cover;
+
+  &__inner {
+
   }
-*/
+
+  &__triangle {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -42px;
+    left: 0;
+    z-index: 5;
+
+    &--white {
+      polygon {
+        fill: $light-color;
+      }
+    }
+  }
+
   &__title {
     margin-top: 20px;
     margin-bottom: 27px;
@@ -24,8 +29,8 @@
     padding-right: $indent-help;
     padding-left: $indent-help;
     text-align: center;
+    font-family: "OpenSans Light";
     font-size: 24px;
-    font-weight: 300;
   }
 
   &__list {
@@ -41,12 +46,11 @@
   &__name {
     font-size: 18px;
     font-weight: bold;
-    letter-spacing: $letter-spacing;
   }
 
   &__link {
+    font-family: "OpenSans Light";
     font-size: 24px;
-    font-weight: 300;
     text-decoration: none;
     color: $pink-color;
   }

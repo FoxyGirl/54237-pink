@@ -6,12 +6,12 @@
   }
 
   &__introduction {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     padding-right: $indent-help;
     padding-left: $indent-help;
+    font-family: "OpenSans Light";
     text-align: center;
     font-size: 24px;
-    font-weight: 300;
 
     p {
       margin-top: 0;
@@ -22,7 +22,7 @@
   &__list {
     @include  ul-clear;
     position: relative;
-    padding-top: 33px;
+    padding-top: 63px;
     padding-right: $indent-help;
     padding-left: $indent-help;
     padding-bottom: 290px;
@@ -68,7 +68,6 @@
     margin-bottom: 13px;
     font-size: 18px;
     font-weight: bold;
-    letter-spacing: $letter-spacing;
   }
 
 }

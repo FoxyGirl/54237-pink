@@ -1,11 +1,9 @@
-@import "_normalize.scss";
-
-@import "variables.scss";
-@import "mixin.scss";
-
+@import "global/_normalize.scss";
+@import "global/variables.scss";
+@import "global/mixin.scss";
 @import "global/fonts.scss";
+@import "global/commons.scss";
 
-@import "global/type.scss";
 @import "blocks/buttons.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
@@ -23,16 +21,9 @@
 @import "blocks/form-photo.scss";
 @import "blocks/input-list.scss";
 @import "blocks/scale-slider.scss";
-
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
-
 @import "blocks/pop-up.scss";
 
 
-
-.visually-hidden {
-  position: absolute;
-  left: -9999px;
-}
 

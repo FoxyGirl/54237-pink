@@ -22,11 +22,10 @@
 
   &__list {
     @include ul-clear;
-    height: 1px;
+    height: 0;
     padding-top: 69px;
     font-size: 18px;
     font-weight: bold;
-    letter-spacing: 0.05em;
     text-align: center;
     overflow: hidden;
 

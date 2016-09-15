@@ -4,17 +4,7 @@
   padding-bottom: 30px;
   background-color: $light-gray-color;
 
-  &--skew-up {
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: -20px;
-      width: 100vw;
-      height: 50px;
-      background-color: $light-gray-color;
-      transform: skewY(-5deg);
-    }
+  &__inner {
   }
 
   &__content {
@@ -41,18 +31,17 @@
       font-size: 18px;
       font-weight: bold;
       text-transform: uppercase;
-      letter-spacing: $letter-spacing;
     }
   }
 
   &__count {
+    font-family: "OpenSans Light";
     font-size: 24px;
-    font-weight: 300;
+    font-weight: normal;
   }
 
   &__currency {
     font-size: 24px;
-    font-weight: 300;
     text-transform: uppercase;
   }
 

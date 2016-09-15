@@ -1,0 +1,28 @@
+html,
+body {
+  min-width: 320px;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $brand-color;
+  background-color: $light-color;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+.triangle-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+
+  &--white {
+    polygon {
+      fill: $light-color;
+    }
+  }
+}

@@ -9,7 +9,7 @@
   &__item {
     margin-right: $indent-help;
     margin-left: $indent-help;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
     background-color: $light-gray-color;
 
     &--panorama {
@@ -17,7 +17,7 @@
     }
 
     &:last-child {
-      margin-bottom: 0;
+        margin-bottom: 0;
     }
   }
 
@@ -39,6 +39,7 @@
         right: $indent-help;
         padding: 10px 20px;
         font-size: 12px;
+        font-weight: bold;
         text-transform: uppercase;
         color: $light-color;
         background-color: $pink-color;
@@ -47,13 +48,12 @@
   }
 
   &__content {
-    padding: 20px 18px;
+    padding: 20px 18px 25px;
     font-size: $font-size-base;
   }
 
   &__author {
     font-weight: bold;
-    margin-bottom: 10px;
   }
   &__timer {
     font-weight: 300;
@@ -62,28 +62,32 @@
   }
 
   &__description {
-    line-height: $line-height - 0.1;
+    line-height: $line-height;
     margin-bottom: 13px;
   }
 
   &__like {
     position: relative;
-    padding-left: 34px;
+    padding-left: 32px;
     font-size: 12px;
     text-transform: uppercase;
     color: $pink-color;
+  }
 
-    &::before {
-      content: "";
-      display: inline-block;
-      vertical-align: top;
-      position: absolute;
-      left: 0;
-      top: 5px;
-      width: 35px;
-      height: 35px;
-      background: transparent url("../../img/icon-heart.svg") 0 0 no-repeat;
+  &__like-heart {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+
+    svg {
+      fill: $pink-color;
     }
   }
+}
+
+.photo-panorama {
+  margin-bottom: 21px;
 }
 

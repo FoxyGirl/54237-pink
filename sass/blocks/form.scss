@@ -10,21 +10,27 @@
 
   &__item {
     display: block;
+
+    &:last-child {
+      .form__label--checkbox {
+        margin-bottom: 25px;
+      }
+    }
   }
 
   &__title {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     padding-top: 30px;
     font-size: $font-size-base;
     font-weight: normal;
     text-align: center;
-    line-height: $line-height;
+    line-height: $line-height + 0.3;
   }
   &__label {
     display: block;
     margin: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     padding-left: 10px;
     text-transform: uppercase;
     color: $pink-color;
@@ -120,7 +126,7 @@
   }
   &__text {
     margin-bottom: 36px;
-    padding: 0 $indent-help;
+    padding: 2px $indent-help;
     font-size: $font-size-base;
     font-weight: normal;
     text-transform: uppercase;
@@ -152,6 +158,7 @@
     resize: none;
     outline: none;
   }
+
 
 }
 

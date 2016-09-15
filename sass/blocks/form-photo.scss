@@ -1,4 +1,6 @@
 .form-photo {
+  margin-top: 0;
+
   &__load-file {
     display: block;
     position: relative;
@@ -26,25 +28,20 @@
     width: 50px;
     height: 50px;
     margin: 0 15px 4px;
-    background: transparent url("../../img/icon-editor-crop.svg") center center no-repeat;
 
-    &--crop {
-      background-image: url("../../img/icon-editor-crop.svg");
-    }
-
-    &--contrast {
-      background-image: url("../../img/icon-editor-contrast.svg");
-    }
-
-    &--fill {
-      background-image: url("../../img/icon-editor-fill.svg");
+    svg {
+      @include zero-centered;
+      fill: $dark-gray-color;
     }
   }
+
   &__input--radio {
     display: none;
 
     &:checked ~ label {
-      background-color: yellow;
+      svg {
+        fill: $pink-color;
+      }
     }
   }
 }
