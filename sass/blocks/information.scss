@@ -18,6 +18,10 @@
       margin-bottom: 20px;
     }
   }
+  
+  &__decorator {
+    position: relative;
+  }
 
   &__list {
     @include  ul-clear;
