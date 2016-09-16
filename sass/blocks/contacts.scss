@@ -3,10 +3,6 @@
   text-align: center;
   border-bottom: 1px solid transparent;
 
-  &__inner {
-
-  }
-
   &__triangle {
     position: absolute;
     width: 100%;
@@ -28,8 +24,8 @@
     padding-top: 18px;
     padding-right: $indent-help;
     padding-left: $indent-help;
-    text-align: center;
     font-family: "OpenSans Light";
+    text-align: center;
     font-size: 24px;
   }
 

@@ -27,6 +27,7 @@
     text-align: center;
     line-height: $line-height + 0.3;
   }
+
   &__label {
     display: block;
     margin: 10px;
@@ -88,10 +89,10 @@
       padding-bottom: 10px;
 
       input[type="radio"] {
+        display: none;
         position: absolute;
         left: 0;
         top: 0;
-        display: none;
 
         & + span {
           &:before {
@@ -124,6 +125,7 @@
     padding: 17px 20px;
     margin-bottom: 23px;
   }
+
   &__text {
     margin-bottom: 36px;
     padding: 2px $indent-help;
@@ -158,8 +160,6 @@
     resize: none;
     outline: none;
   }
-
-
 }
 
 

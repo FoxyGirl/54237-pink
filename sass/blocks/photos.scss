@@ -1,7 +1,4 @@
 .photos {
-  &__inner {
-
-  }
   &__list {
     @include ul-clear
   }
@@ -55,6 +52,7 @@
   &__author {
     font-weight: bold;
   }
+
   &__timer {
     font-weight: 300;
     font-size: 12px;
@@ -64,6 +62,10 @@
   &__description {
     line-height: $line-height;
     margin-bottom: 13px;
+
+    span {
+      text-transform: uppercase;
+    }
   }
 
   &__like {
