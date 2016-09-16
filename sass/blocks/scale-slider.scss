@@ -1,0 +1,21 @@
+.scale-slider {
+  position: relative;
+  width: 240px;
+  margin: 35px auto 70px;
+
+  &__line {
+    height: 2px;
+    background-color: #000;
+  }
+
+  &__point {
+    position: absolute;
+    top: -6px;
+    left: 75%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 2px solid $pink-color;
+    border-radius: 50%;
+  }
+}

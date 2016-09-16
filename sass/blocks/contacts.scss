@@ -1,0 +1,53 @@
+.contacts {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+
+  &__triangle {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -42px;
+    left: 0;
+    z-index: 5;
+
+    &--white {
+      polygon {
+        fill: $light-color;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 27px;
+    padding-top: 18px;
+    padding-right: $indent-help;
+    padding-left: $indent-help;
+    font-family: "OpenSans Light";
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &__list {
+    @include ul-clear;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding-right: $indent-help;
+    padding-left: $indent-help;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__link {
+    font-family: "OpenSans Light";
+    font-size: 24px;
+    text-decoration: none;
+    color: $pink-color;
+  }
+}

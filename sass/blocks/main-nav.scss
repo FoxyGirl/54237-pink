@@ -1,0 +1,50 @@
+.main-nav {
+  background-color: rgba($dark-color, 0.3);
+
+  &__toggler {
+    position: absolute;
+    top: $indent-help;
+    right: $indent-help;
+    width: 50px;
+    height: 25px;
+    background: transparent url('../../img/icon-menu-burger.svg') right center no-repeat;
+    border: none;
+    outline: none;
+
+    &--close {
+      background-image: url('../../img/icon-menu-cross.svg');
+    }
+  }
+
+  &--opened {
+    background-color: $brand-color;
+  }
+
+  &__list {
+    @include ul-clear;
+    height: 0;
+    padding-top: 69px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+
+    &.main-nav__list--opened {
+      height: auto;
+    }
+
+    .main-nav__item {
+      a {
+        display: block;
+        padding: 19px;
+        font-weight: bold;
+        color: $light-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $brand-color;
+        border-top: 1px solid #485461;
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.photos {
+  &__list {
+    @include ul-clear
+  }
+
+  &__item {
+    margin-right: $indent-help;
+    margin-left: $indent-help;
+    margin-bottom: 20px;
+    background-color: $light-gray-color;
+
+    &--panorama {
+      margin: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    font-size: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &--panorama {
+      position: relative;
+
+      &::after {
+        content: attr(data-title);
+        position: absolute;
+        top: 0;
+        right: $indent-help;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $light-color;
+        background-color: $pink-color;
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px 18px 25px;
+    font-size: $font-size-base;
+  }
+
+  &__author {
+    font-weight: bold;
+  }
+
+  &__timer {
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    line-height: $line-height;
+    margin-bottom: 13px;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__like {
+    position: relative;
+    padding-left: 32px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $pink-color;
+  }
+
+  &__like-heart {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+
+    svg {
+      fill: $pink-color;
+    }
+  }
+}
+
+.photo-panorama {
+  margin-bottom: 21px;
+}
+

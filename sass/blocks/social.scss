@@ -1,0 +1,35 @@
+.social {
+  &-links {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-size: 0;
+  }
+
+  &-link {
+    display: inline-block;
+    vertical-align: top;
+    width: 45px;
+    height: 45px;
+    margin: 0 8px;
+    border-radius: 50%;
+    border: 3px solid $gray-color;
+    background: #fff url('../../img/icon-twitter.svg') center center no-repeat;
+
+    &:hover {
+      background-color: $gray-color;
+    }
+
+    &--vk {
+      background-image: url('../../img/icon-twitter.svg');
+    }
+
+    &--facebook {
+      background-image: url('../../img/icon-facebook.svg');
+    }
+
+    &--youtube {
+      background-image: url('../../img/icon-youtube.svg');
+    }
+  }
+}

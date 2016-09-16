@@ -1,0 +1,43 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin ul-clear() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin border($width: 1px, $type: solid, $color: #000) {
+  border: $width $type $color;
+}
+
+@mixin border-table() {
+  @include border(2px, solid, #e5e5e5);
+}
+
+@mixin placeholder-color($color: red) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin zero-centered() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+

@@ -1,0 +1,38 @@
+.page-footer {
+  padding-top: 40px;
+  text-align: center;
+
+  &__inner {
+    margin-right: $indent-help;
+    margin-left: $indent-help;
+    padding-top: 25px;
+  }
+
+  &__logo {
+    margin-bottom: 19px;
+  }
+
+  &__social {
+    margin-bottom: 20px;
+  }
+
+  &__copyright {
+    padding-top: 20px;
+
+    &-link {
+      display: inline-block;
+      vertical-align: middle;
+      width: 27px;
+      height: 34px;
+      margin-left: 11px;
+
+      svg {
+        fill: $pink-color;
+
+        &:hover {
+          fill: $brand-color;
+        }
+      }
+    }
+  }
+}
