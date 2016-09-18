@@ -1,10 +1,78 @@
 .form {
+  &__inner {
+    @include container;
+    @include respond(mobile) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__container {
+    &--left {
+      @include respond(tablet) {
+        float: left;
+        width: 50%;
+      }
+    }
+
+    &--right {
+      @include respond(tablet) {
+        float: right;
+        width: 50%;
+      }
+    }
+  }
+
   &__section {
-    padding: $indent-help;
-    padding-bottom: $indent-help;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    @include clearfix;
+
+    @include respond(mobile) {
+      padding-left: $indent-help;
+      padding-right: $indent-help;
+      border: none;
+    }
+
+    @include respond(tablet) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
 
     &--gray {
       background-color: $light-gray-color;
+
+      @include respond(tablet) {
+        background-color: $light-color;
+      }
+    }
+
+    &--colums-2 {
+      @include clearfix;
+      @include respond(desktop-all) {
+        .form__item {
+          &:nth-child(odd) {
+            float: left;
+            width: 45%;
+          }
+
+          &:nth-child(even) {
+            float: right;
+            width: 45%;
+          }
+        }
+      }
+    }
+
+    &--columns-3 {
+      @include clearfix;
+      @include respond(desktop-all) {
+        .form__item {
+          float: left;
+          width: 30%;
+          padding-right: 3%;
+        }
+      }
     }
   }
 
@@ -34,7 +102,7 @@
     margin-bottom: 10px;
     padding-left: 10px;
     text-transform: uppercase;
-    color: $pink-color;
+    color: $main-brand-color;
 
     &--center {
       text-align: center;
@@ -119,20 +187,37 @@
   }
 
   &__input {
+    position: relative;
     display: block;
     width: 100%;
     box-sizing: border-box;
     padding: 17px 20px;
     margin-bottom: 23px;
+    border: 2px solid $gray-color;
+
+
+    &--phone {
+      @include respond(tablet) {
+        padding-right: 80px;
+        background: linear-gradient(270deg, $gray-color 60px, $light-color 60px);
+      }
+    }
+
+    &--email {
+      @include respond(tablet) {
+        padding-right: 80px;
+        background: linear-gradient(270deg, $gray-color 60px, $light-color 60px);
+      }
+    }
   }
 
-  &__text {
+  &__legend {
     margin-bottom: 36px;
     padding: 2px $indent-help;
     font-size: $font-size-base;
     font-weight: normal;
     text-transform: uppercase;
-    color: $pink-color;
+    color: $main-brand-color;
     text-align: center;
   }
 
@@ -143,8 +228,24 @@
   &__info {
     text-transform: uppercase;
 
-    span {
-      color: $pink-color;
+    @include respond(tablet) {
+      float: right;
+    }
+  }
+
+  &__required {
+    color: $main-brand-color;
+  }
+
+  &__info-add {
+    color: $brand-color;
+
+    &--hidden {
+      display: none;
+
+      @include respond(desktop-all) {
+        display: inline;
+      }
     }
   }
 

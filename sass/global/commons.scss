@@ -5,6 +5,10 @@ body {
   font-size: $font-size-base;
   color: $brand-color;
   background-color: $light-color;
+
+  @include respond(desktop-all) {
+    font-size: $font-size-tablet;
+  }
 }
 
 .visually-hidden {
@@ -25,4 +29,9 @@ body {
       fill: $light-color;
     }
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

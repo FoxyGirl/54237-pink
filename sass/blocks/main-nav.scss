@@ -1,10 +1,9 @@
 .main-nav {
-  background-color: rgba($dark-color, 0.3);
 
   &__toggler {
-    position: absolute;
-    top: $indent-help;
-    right: $indent-help;
+    float: right;
+    margin: $indent-help;
+    padding: 0;
     width: 50px;
     height: 25px;
     background: transparent url('../../img/icon-menu-burger.svg') right center no-repeat;
@@ -13,6 +12,14 @@
 
     &--close {
       background-image: url('../../img/icon-menu-cross.svg');
+    }
+
+    @include respond(tablet) {
+      margin: 2*$indent-help;
+    }
+
+    @include respond(desktop-all) {
+      display: none;
     }
   }
 
@@ -23,8 +30,8 @@
   &__list {
     @include ul-clear;
     height: 0;
-    padding-top: 69px;
-    font-size: 18px;
+    clear: both;
+    font-size: 0;
     font-weight: bold;
     text-align: center;
     overflow: hidden;
@@ -33,7 +40,15 @@
       height: auto;
     }
 
+    @include respond(desktop-all) {
+      height: auto;
+      float: right;
+      clear: none;
+    }
+
     .main-nav__item {
+      font-size: 18px;
+
       a {
         display: block;
         padding: 19px;
@@ -44,6 +59,17 @@
         background-color: $brand-color;
         border-top: 1px solid #485461;
         border-bottom: 1px solid #000;
+
+        @include respond(desktop-all) {
+          padding: 40px;
+          text-transform: none;
+          font-weight: normal;
+          background-color: transparent;
+        }
+      }
+
+      @include respond(desktop-all) {
+        display: inline-block;
       }
     }
   }

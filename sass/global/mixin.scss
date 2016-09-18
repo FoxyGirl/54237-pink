@@ -41,3 +41,40 @@
   margin: auto;
 }
 
+@mixin respond($media) {
+
+  // for generic mobile viewports (width  to 660px)
+  @if $media == mobile {
+    @media only screen and (max-width: $bp-small) { @content; }
+  }
+
+  // for generic tablet viewports (width from 661px to 960px)
+  @else if $media == tablet {
+    @media only screen and (min-width: $bp-small - 1) { @content; }
+  }
+
+  // for ALL desktop viewports (from 960px and bigger)
+  @else if $media == desktop-all {
+    @media only screen and (min-width: $bp-medium - 1) { @content; }
+  }
+
+}
+
+
+@mixin container() {
+  position: relative;
+  margin: 0 auto;
+  padding-right: $indent-help;
+  padding-left: $indent-help;;
+  @include clearfix;
+
+  @include respond(tablet) {
+    padding: 0 2*$indent-help;
+  }
+
+  @include respond(desktop-all) {
+    max-width: 940px;
+    padding: 0;
+  }
+}
+

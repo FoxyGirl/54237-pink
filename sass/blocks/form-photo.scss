@@ -1,6 +1,19 @@
 .form-photo {
   margin-top: 0;
 
+  &__inner {
+    @include clearfix;
+    @include respond(tablet) {
+      padding: 0 2*$indent-help;
+    }
+
+    @include respond(desktop-all) {
+      max-width: 940px;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
   &__load-file {
     display: block;
     position: relative;
@@ -40,7 +53,7 @@
 
     &:checked ~ label {
       svg {
-        fill: $pink-color;
+        fill: $main-brand-color;
       }
     }
   }

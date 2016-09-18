@@ -1,0 +1,23 @@
+.additional {
+  &__inner {
+    @include container;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 45px 0 50px;
+    text-align: center;
+    line-height: $line-height + 0.4;
+
+    @include respond(tablet) {
+      padding-right: 55px;
+      padding-left: 55px;
+      font-size: 18px;
+    }
+
+    @include respond(desktop-all) {
+      padding-right: 80px;
+      padding-left: 80px;
+    }
+  }
+}
