@@ -21,7 +21,7 @@
     width: 240px;
     height: 275px;
     margin-right: 70px;
-    background: cyan url("../../img/timer.svg") 0 center no-repeat;
+    background: cyan url("../img/timer.svg") 0 center no-repeat;
 
     @include respond(desktop-all) {
       width: 300px;

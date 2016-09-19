@@ -6,12 +6,12 @@
     padding: 0;
     width: 50px;
     height: 25px;
-    background: transparent url('../../img/icon-menu-burger.svg') right center no-repeat;
+    background: transparent url('../img/icon-menu-burger.svg') right center no-repeat;
     border: none;
     outline: none;
 
     &--close {
-      background-image: url('../../img/icon-menu-cross.svg');
+      background-image: url('../img/icon-menu-cross.svg');
     }
 
     @include respond(tablet) {

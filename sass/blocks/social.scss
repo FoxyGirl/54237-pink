@@ -14,22 +14,22 @@
     margin: 0 8px;
     border-radius: 50%;
     border: 3px solid $gray-color;
-    background: #fff url('../../img/icon-twitter.svg') center center no-repeat;
+    background: #fff url('../img/icon-twitter.svg') center center no-repeat;
 
     &:hover {
       background-color: $gray-color;
     }
 
     &--vk {
-      background-image: url('../../img/icon-twitter.svg');
+      background-image: url('../img/icon-twitter.svg');
     }
 
     &--facebook {
-      background-image: url('../../img/icon-facebook.svg');
+      background-image: url('../img/icon-facebook.svg');
     }
 
     &--youtube {
-      background-image: url('../../img/icon-youtube.svg');
+      background-image: url('../img/icon-youtube.svg');
     }
   }
 }

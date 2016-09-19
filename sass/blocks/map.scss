@@ -6,7 +6,7 @@
     position: relative;
     width: 100%;
     height: 200px;
-    background: $gray-color url("../../img/bg-map-mobile@1x.png") center center no-repeat;
+    background: $gray-color url("../img/bg-map-mobile@1x.png") center center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 
@@ -27,7 +27,7 @@
       width: 36px;
       height: 36px;
       margin-left: -18px;
-      background: transparent url(../../img/icon-map-marker.svg) center center no-repeat;
+      background: transparent url(../img/icon-map-marker.svg) center center no-repeat;
     }
   }
 }
