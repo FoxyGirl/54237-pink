@@ -2,22 +2,44 @@
   padding-top: 40px;
   text-align: center;
 
+  &--mobile-none {
+    @include respond(mobile) {
+      display: none;
+    }
+  }
+
   &__inner {
-    margin-right: $indent-help;
-    margin-left: $indent-help;
+    @include container;
     padding-top: 25px;
   }
 
   &__logo {
     margin-bottom: 19px;
+
+    @include respond(tablet) {
+      float: left;
+      width: 25%;
+    }
   }
 
   &__social {
     margin-bottom: 20px;
+
+    @include respond(tablet) {
+      float: left;
+      width: 50%;
+    }
   }
 
   &__copyright {
     padding-top: 20px;
+
+    @include respond(tablet) {
+      float: right;
+      width: 25%;
+      padding-top: 10px;
+      text-align: right;
+    }
 
     &-link {
       display: inline-block;
@@ -27,7 +49,7 @@
       margin-left: 11px;
 
       svg {
-        fill: $pink-color;
+        fill: $main-brand-color;
 
         &:hover {
           fill: $brand-color;

@@ -1,4 +1,20 @@
 .promo-hand {
   min-height: 395px;
   background: transparent url("../../img/iphone-hand-mobile@1x.png") 0 bottom no-repeat;
+
+  @include respond(tablet) {
+    position: absolute;
+    width: 50%;
+    right: 5%;
+    bottom: 0;
+    height: 450px;
+    background-size: auto 100%;
+  }
+
+  @include respond(desktop-all) {
+    width: 70%;
+    right: -8%;
+    bottom: 0;
+    background-size: auto 100%;
+  }
 }

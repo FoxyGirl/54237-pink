@@ -22,14 +22,30 @@
     background-color: $green-color;
     border-color: $green-color;
     border-radius: 4px;
+    
+    &.btn--big-form {
+      @include respond(tablet) {
+        float: left;
+      }
+    }
   }
 
   &--post {
     margin-bottom: 10px;
     padding-top: 14px;
     padding-bottom: 14px;
-    color: $pink-color;
-    border-color: $pink-color;
+    color: $main-brand-color;
+    border-color: $main-brand-color;
+
+    @include respond(tablet) {
+      min-width: 255px;
+      margin-bottom: 25px;
+    }
+
+    @include respond(desktop-all) {
+      min-width: 178px;
+      margin-right: 22px;
+    }
   }
 
   &--reset {
@@ -42,6 +58,16 @@
 
     &:hover {
       opacity: 1;
+    }
+
+    @include respond(tablet) {
+      min-width: 255px;
+      margin-bottom: 25px;
+    }
+
+    @include respond(desktop-all) {
+      min-width: 178px;
+      margin-right: 22px;
     }
   }
 

@@ -1,20 +1,54 @@
 .page-header {
+  position: relative;
   text-align: center;
   color: $light-color;
   background: $body-bg-dark url("../../img/bg-back-mobile@1x.jpg") top center no-repeat;
+  -webkit-background-size:  cover;
+  background-size: cover;
+  @include clearfix;
+
+  @include respond(tablet) {
+    background-color: red;
+    background-size: 100% auto;
+    background-position: center center;
+  }
+
+  @include respond(desktop-all) {
+    background-color: yellow;
+  }
 
   &--bg-position {
     background-position: center 255px;
+
+    @include respond(tablet) {
+      background-position: center 360px;
+    }
+
+    @include respond(desktop-all) {
+      background-position: center center;
+    }
+  }
+
+  &__up {
+    @include clearfix;
+    background-color: rgba($dark-color, 0.3);
+  }
+
+  &__inner-up {
+    @include respond(desktop-all) {
+      margin: 0 auto;
+      max-width: 950px;
+    }
   }
 
   &__inner {
-    position: relative;
+    @include container;
   }
 
+
   &__logo {
-    position: absolute;
-    top: $indent-help;
-    left: $indent-help;
+    float: left;
+    margin: $indent-help;
 
     &-link {
       display: block;
@@ -23,10 +57,15 @@
     &:hover {
       svg {
         path {
-          fill: $pink-color;
+          fill: $main-brand-color;
         }
       }
     }
+
+    @include respond(tablet) {
+      margin: 2*$indent-help;
+    }
+
   }
 
   &__title {
@@ -34,9 +73,14 @@
     margin-top: 0;
     margin-bottom: 0;
     padding: 30px 40px;
-    font-family: "OpenSans Light";
+    font-family: $font-family-light;
     font-size: 24px;
     font-weight: normal;
     line-height: 1.25;
+
+    @include respond(tablet) {
+      font-size: 50px;
+    }
   }
 }
+

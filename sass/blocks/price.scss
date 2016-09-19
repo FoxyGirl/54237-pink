@@ -4,21 +4,32 @@
   padding-bottom: 30px;
   background-color: $light-gray-color;
 
+  @include respond(desktop-all) {
+    padding-top: 150px;
+  }
+
+  &__inner {
+    @include container;
+  }
+
   &__content {
-    height: 350px;
+    height: 400px;
   }
 
   &__table {
-    &--active2 {
-      position: absolute;
-      left: -260px;
-      top: 0;
+
+    @include respond(mobile) {
+      th:first-child,
+      td:first-child {
+        display: none;
+      }
     }
   }
 
+
+
   &__name {
     position: relative;
-    min-width: 236px;
     padding: 20px;
     @include border-table;
     background-color: $brand-color;
@@ -29,10 +40,23 @@
       font-weight: bold;
       text-transform: uppercase;
     }
+
+    &--hit {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 73px;
+        height: 73px;
+        background: transparent url("../../img/bg-hit.svg") 0 0 no-repeat;
+      }
+    }
   }
 
   &__count {
-    font-family: "OpenSans Light";
+    font-family: $font-family-light;
     font-size: 24px;
     font-weight: normal;
   }
@@ -48,33 +72,48 @@
     @include border-table;
     text-transform: uppercase;
 
-    &--on {
-      &::after {
-        content: "";
-        display: inline-block;
-        vertical-align: top;
-        position: absolute;
-        right: 15px;
-        top: 8px;
-        width: 33px;
-        height: 33px;
-        background-color: red;
-        background: transparent url("../../img/icon-yes.svg") 0 0 no-repeat;
+    @include respond(tablet) {
+      text-align: center;
+    }
+
+    &--mobile-hidden {
+      text-align: left;
+      text-transform: none;
+    }
+
+    &-name {
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__marker {
+    float: right;
+
+    @include respond(tablet) {
+      float: none;
+    }
+
+    &--yes {
+      fill: $green-color;
+
+      @include respond(tablet) {
+        svg {
+          width: 34px;
+          height: auto;
+        }
       }
     }
 
-    &--off {
-      &::after {
-        content: "";
-        display: inline-block;
-        vertical-align: top;
-        position: absolute;
-        right: 15px;
-        top: 8px;
-        width: 33px;
-        height: 33px;
-        background-color: red;
-        background: transparent url("../../img/icon-no.svg") 0 0 no-repeat;
+    &--no {
+      fill: $red-color;
+
+      @include respond(tablet) {
+        svg {
+          width: 30px;
+          height: auto;
+        }
       }
     }
   }

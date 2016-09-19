@@ -1,5 +1,31 @@
 .applications {
+  position: relative;
+  z-index: 2;
   background-color: $body-bg-dark;
+
+  @include respond(mobile) {
+    margin-left: -$indent-help;
+    margin-right: -$indent-help;
+  }
+
+  @include respond(tablet) {
+    float: left;
+    width: 50%;
+    background-color: transparent;
+  }
+
+  &__title {
+    display: none;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    font-family: $font-family-light;
+    font-weight: normal;
+    font-size: 50px;
+
+    @include respond(tablet) {
+      display: block;
+    }
+  }
 
   &__list {
     @include ul-clear;

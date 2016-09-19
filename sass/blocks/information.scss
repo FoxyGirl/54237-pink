@@ -2,14 +2,14 @@
   text-align: center;
 
   &__inner {
+    @include container;
     padding-top: 37px;
   }
 
   &__introduction {
     margin-bottom: 30px;
-    padding-right: $indent-help;
-    padding-left: $indent-help;
-    font-family: "OpenSans Light";
+    padding-top: 50px;
+    font-family: $font-family-light;
     text-align: center;
     font-size: 24px;
 
@@ -18,31 +18,29 @@
       margin-bottom: 20px;
     }
   }
-  
+
   &__decorator {
     position: relative;
+    background-color: $light-gray-color;
   }
 
   &__list {
     @include  ul-clear;
     position: relative;
     padding-top: 63px;
-    padding-right: $indent-help;
-    padding-left: $indent-help;
     padding-bottom: 290px;
-    background-color: $light-gray-color;
 
-    &--skew-up {
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: -20px;
-        width: 100vw;
-        height: 50px;
-        background-color: $light-gray-color;
-        transform: skewY(-5deg);
-      }
+    @include respond(tablet) {
+      float: right;
+      width: 51%;
+      padding-bottom: 20px;
+      padding-top: 103px;
+    }
+
+    @include respond(desktop-all) {
+      float: none;
+      width: 100%;
+      padding-bottom: 20px;
     }
 
     &::after  {
@@ -54,15 +52,54 @@
       width: 100%;
       height: 280px;
       z-index: 2;
-      background: $light-gray-color url("../../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
+      background: transparent url("../../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
+
+      @include respond(tablet) {
+        left: -100%;
+        width: 270px;
+        height: 480px;
+        -webkit-background-size:  270px auto;
+        background-size: 270px auto;
+        /*
+        display: none;
+        */
+      }
     }
   }
 
   &__item {
+    position: relative;
     margin-bottom: 25px;
+
+    @include respond(desktop-all) {
+      float: left;
+      width: 33.333%;
+      padding-top: 260px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 280px;
+        height: 300px;
+        position: absolute;
+        top: -100px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background: transparent url("../../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
+        -webkit-background-size: 180px auto;
+        background-size: 180px auto;
+        border-bottom: 1px solid gray;
+      }
+    }
 
     p {
       line-height: $line-height;
+
+      @include respond(desktop-all) {
+        padding-left: $indent-help;
+        padding-right: $indent-help;
+      }
     }
   }
 
@@ -71,5 +108,10 @@
     margin-bottom: 13px;
     font-size: 18px;
     font-weight: bold;
+
+    @include respond(desktop-all) {
+      padding-left: $indent-help;
+      padding-right: $indent-help;
+    }
   }
 }
