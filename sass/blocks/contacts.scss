@@ -3,19 +3,8 @@
   text-align: center;
   border-bottom: 1px solid transparent;
 
-  &__triangle {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    bottom: -42px;
-    left: 0;
-    z-index: 5;
-
-    &--white {
-      polygon {
-        fill: $light-color;
-      }
-    }
+  &__inner {
+    @include container;
   }
 
   &__title {
@@ -27,6 +16,14 @@
     font-family: "OpenSans Light";
     text-align: center;
     font-size: 24px;
+
+    @include respond(tablet) {
+      font-size: 40px;
+    }
+
+    @include respond(desktop-all) {
+      font-size: 50px;
+    }
   }
 
   &__list {
@@ -35,13 +32,36 @@
 
   &__item {
     margin-bottom: 20px;
-    padding-right: $indent-help;
-    padding-left: $indent-help;
+
+    @include respond(tablet) {
+      float: left;
+      width: 50%;
+
+      &:nth-child(3n) {
+        width: 100%;
+      }
+    }
+
+    @include respond(desktop-all) {
+      width: 33.33%;
+
+      &:nth-child(2n) {
+        float: right;
+      }
+
+      &:nth-child(3n) {
+        width: 33.33%;
+      }
+    }
   }
 
   &__name {
     font-size: 18px;
     font-weight: bold;
+
+    @include respond(desktop-all) {
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
