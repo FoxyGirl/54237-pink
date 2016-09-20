@@ -20,13 +20,10 @@ $red-color: #f25b26;
 $indent-help: 20px;
 
 
-$tablet-widths: "(min-width: 660px)";
-$desktop-widths: "(min-width: 960px)";
-
 $bp-xsmall: 320px; // Tiny-screen and old devices;
 $bp-small: 660px; // Mobiles and portrait-view tablets
 $bp-medium: 960px; // Desktop starts here
-$bp-large: 1200px; // Normal size desktop view
-$bp-xlarge: 1144px;
+$bp-large: 1040px; // Desktop seamless transition
+$bp-xlarge: 1200px;  // Normal size desktop view
 
 

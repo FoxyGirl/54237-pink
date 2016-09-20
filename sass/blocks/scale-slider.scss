@@ -1,21 +1,37 @@
 .scale-slider {
   position: relative;
   width: 240px;
+  height: 20px;
   margin: 35px auto 70px;
 
-  &__line {
-    height: 2px;
-    background-color: #000;
+  @include respond(mobile) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    margin-bottom: 0;
   }
 
-  &__point {
-    position: absolute;
-    top: -6px;
-    left: 75%;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border: 2px solid $main-brand-color;
-    border-radius: 50%;
+  @include respond(tablet) {
+    float: right;
   }
+
 }
+
+.scale-slider__line {
+  height: 2px;
+  background-color: #000;
+}
+
+.scale-slider__point {
+  position: absolute;
+  top: -6px;
+  left: 75%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid $main-brand-color;
+  border-radius: 50%;
+}
+

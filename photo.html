@@ -241,7 +241,7 @@
       <section class="form-photo">
         <div class="form-photo__inner">
           <form action="http://example.org/" method="post" name="form-photo">
-            <div class="form__section  form__section--gray">
+            <div class="form__section  form__section--gray  form__section--full">
               <div class="form__container  form__container--left">
                 <div class="form__item">
                   <label for="newPhoto" class="form-photo__load-file">
@@ -254,13 +254,19 @@
                 <div class="form__item">
                   <ul class="input-list  input-list--line">
                     <li class="input-list__item  input-list__item--line">
-                      <input class="form-photo__input--radio" type="radio" name="correct" value="crop" id="crop" checked>
+                      <input class="form-photo__input  form-photo__input--radio" type="radio" name="correct" value="crop" id="crop" checked>
                       <label class="form-photo__label" for="crop">
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                           <path fill="none" d="M0,0h48v48H0V0z"/>
                           <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
                         </svg>
                       </label>
+                      <input class="form-photo__input  form-photo__input--range" type="range" name="correct_crop" min="0" max="100" step="1" value="50">
+                      <div class="scale-slider">
+                        <div class="scale-slider__line">
+                          <span class="scale-slider__point"></span>
+                        </div>
+                      </div>
                     </li>
                     <li class="input-list__item  input-list__item--line">
                       <input class="form-photo__input--radio" type="radio" name="correct" value="fill" id="brightness">
@@ -271,6 +277,12 @@
                           <rect y="40" width="48" height="3"/>
                         </svg>
                       </label>
+                      <input class="form-photo__input  form-photo__input--range" type="range" name="correct_brightness" min="0" max="100" step="1" value="50">
+                      <div class="scale-slider">
+                        <div class="scale-slider__line"  style="background-color: darkgreen">
+                          <span class="scale-slider__point"></span>
+                        </div>
+                      </div>
                     </li>
                     <li class="input-list__item  input-list__item--line">
                       <input class="form-photo__input--radio" type="radio" name="correct" value="contrast" id="contrast">
@@ -280,16 +292,23 @@
                           <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
                         </svg>
                       </label>
+                      <input class="form-photo__input  form-photo__input--range" type="range" name="correct_contrast" min="0" max="100" step="1" value="3">
+                      <div class="scale-slider">
+                        <div class="scale-slider__line"  style="background-color: darkblue">
+                          <span class="scale-slider__point"></span>
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
+                <!--
                 <div class="form__item">
                   <div class="scale-slider">
                     <div class="scale-slider__line">
                       <span class="scale-slider__point"></span>
                     </div>
                   </div>
-
+-->
                 </div>
                 <div class="form__submit">
                   <button class="btn btn--post" type="submit">Запостить</button>

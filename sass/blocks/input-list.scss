@@ -1,5 +1,10 @@
 .input-list {
   @include ul-clear;
+  position: relative;
+
+  @include respond(mobile) {
+    padding-bottom: 70px;
+  }
 
   &--line {
     text-align: center;
@@ -7,9 +12,13 @@
   }
 
   &__item {
-    &--line {
-      display: inline-block;
-      vertical-align: top;
+    @include clearfix;
+
+    @include respond(mobile) {
+      &--line {
+        display: inline-block;
+        vertical-align: top;
+      }
     }
   }
 }

@@ -1,60 +1,89 @@
 .form-photo {
   margin-top: 0;
+}
 
-  &__inner {
-    @include clearfix;
-    @include respond(tablet) {
-      padding: 0 2*$indent-help;
-    }
-
-    @include respond(desktop-all) {
-      max-width: 940px;
-      padding: 0;
-      margin: 0 auto;
-    }
+.form-photo__inner {
+  @include clearfix;
+  @include respond(tablet) {
+    padding: 0 2*$indent-help;
   }
 
-  &__load-file {
-    display: block;
-    position: relative;
-    width: 280px;
-    height: 374px;
-    margin: 0 auto 40px;
-    overflow: hidden;
-    background-color: #124578;
+  @include respond(desktop-all) {
+    max-width: 940px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
 
-    input[type="file"] {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      cursor: pointer;
-    }
+.form-photo__load-file {
+  display: block;
+  position: relative;
+  width: 280px;
+  height: 374px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  background-color: #124578;
+
+  input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.form-photo__label {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 15px 4px;
+
+  svg {
+    @include zero-centered;
+    fill: $dark-gray-color;
   }
 
-  &__label {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    margin: 0 15px 4px;
+  @include respond(tablet) {
+    float: left;
 
     svg {
-      @include zero-centered;
-      fill: $dark-gray-color;
+      fill: $main-brand-color;
     }
   }
+}
 
-  &__input--radio {
-    display: none;
+.form-photo__input {
+  &--radio {
+      display: none;
 
     &:checked ~ label {
       svg {
         fill: $main-brand-color;
       }
+    }
+
+    @include respond(mobile) {
+      &:checked ~ .scale-slider {
+        display: block;
+        float: none;
+      }
+    }
+
+    @include respond(tablet) {
+      float: left;
+    }
+  }
+
+  &--range {
+    display: none;
+
+    @include respond(tablet) {
+      float: right;
     }
   }
 }
