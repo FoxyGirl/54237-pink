@@ -10,12 +10,12 @@
   }
 
   &--success {
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       width: 780px;
     }
 
     .pop-up__inner {
-      @include respond(desktop-all) {
+      @include respond(desktop) {
         padding-right: 180px;
         padding-left: 180px;
       }
@@ -29,7 +29,7 @@
       padding: 30px 70px 20px;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
 
     }
   }

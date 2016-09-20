@@ -4,7 +4,7 @@
   padding-bottom: 30px;
   background-color: $light-gray-color;
 
-  @include respond(desktop-all) {
+  @include respond(desktop) {
     padding-top: 150px;
   }
 

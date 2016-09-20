@@ -14,7 +14,7 @@
       height: 370px;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       height: 500px;
     }
 

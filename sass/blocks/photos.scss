@@ -35,7 +35,7 @@
       }
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       display: inline-block;
       vertical-align: top;
       width: 300px;

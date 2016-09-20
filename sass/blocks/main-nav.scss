@@ -18,7 +18,7 @@
       margin: 2*$indent-help;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       display: none;
     }
   }
@@ -40,7 +40,7 @@
       height: auto;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       height: auto;
       float: right;
       clear: none;
@@ -60,7 +60,7 @@
         border-top: 1px solid #485461;
         border-bottom: 1px solid #000;
 
-        @include respond(desktop-all) {
+        @include respond(desktop) {
           padding: 40px;
           text-transform: none;
           font-weight: normal;
@@ -68,7 +68,7 @@
         }
       }
 
-      @include respond(desktop-all) {
+      @include respond(desktop) {
         display: inline-block;
       }
     }

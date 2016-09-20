@@ -3,17 +3,19 @@
   text-align: center;
   color: $light-color;
   background: $body-bg-dark url("../img/bg-back-mobile@1x.jpg") top center no-repeat;
-  -webkit-background-size:  cover;
-  background-size: cover;
+  -webkit-background-size:  auto 472px;
+  background-size: auto 472px;
   @include clearfix;
 
   @include respond(tablet) {
     background-color: red;
     background-size: 100% auto;
     background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 
-  @include respond(desktop-all) {
+  @include respond(desktop) {
     background-color: yellow;
   }
 
@@ -24,7 +26,7 @@
       background-position: center 360px;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       background-position: center center;
     }
   }
@@ -35,7 +37,7 @@
   }
 
   &__inner-up {
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       margin: 0 auto;
       max-width: 950px;
     }

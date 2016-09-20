@@ -6,7 +6,7 @@ body {
   color: $brand-color;
   background-color: $light-color;
 
-  @include respond(desktop-all) {
+  @include respond(desktop) {
     font-size: $font-size-tablet;
   }
 }

@@ -3,7 +3,7 @@
     display: none;
   }
 
-  @include respond(desktop-all) {
+  @include respond(desktop) {
     background-color: $light-gray-color;
   }
 
@@ -23,7 +23,7 @@
     margin-right: 70px;
     background: cyan url("../img/timer.svg") 0 center no-repeat;
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       width: 300px;
       height: 345px;
       background-color: yellow;
@@ -41,7 +41,7 @@
   &__break {
     display: block;
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       display: inline;
     }
   }

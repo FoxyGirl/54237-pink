@@ -15,7 +15,7 @@
       font-size: 18px;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       padding-right: 80px;
       padding-left: 80px;
     }

@@ -63,7 +63,7 @@
 
   &--colums-2 {
     @include clearfix;
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       .form__item {
         &:nth-child(odd) {
           float: left;
@@ -80,7 +80,7 @@
 
   &--columns-3 {
     @include clearfix;
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       .form__item {
         float: left;
         width: 30%;
@@ -90,21 +90,21 @@
   }
 
   &--half {
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       width: 49%;
       box-sizing: border-box;
     }
   }
 
   &--order-1 {
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       order: -1;
       align-self: flex-end;
     }
   }
 
   &--order-2 {
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       order: -2;
       align-self: flex-start;
     }
@@ -283,7 +283,7 @@
   &--hidden {
     display: none;
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       display: inline;
     }
   }

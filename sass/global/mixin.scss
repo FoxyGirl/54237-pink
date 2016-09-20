@@ -53,21 +53,26 @@
     @media only screen and (min-width: $bp-small) { @content; }
   }
 
-  // for generic tablet viewports (width from 660px to 959px)
-  @else if $media == tablet-only {
-    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium - 1) { @content; }
+  // for generic tablet viewports (width from 700px to 959px)
+  @else if $media == tablet-large {
+    @media only screen and (min-width: $bp-small-middle-width) and (max-width: $bp-medium - 1) { @content; }
+  }
+
+  // width for small-desktop viewports (from 960px to 1144px, intermediate values)
+  @else if $media == desktop-small {
+    @media only screen and (min-width: $bp-medium + 1) and (max-width: $bp-large) { @content; }
   }
 
   // for ALL desktop viewports (from 960px and bigger)
-  @else if $media == desktop-all {
+  @else if $media == desktop {
     @media only screen and (min-width: $bp-medium) { @content; }
   }
-
+/*
   // for desktop viewports (from 1040px and bigger)
   @else if $media == desktop {
     @media only screen and (min-width: $bp-large + 1) { @content; }
   }
-
+*/
 }
 
 
@@ -78,11 +83,11 @@
   padding-left: $indent-help;;
   @include clearfix;
 
-  @include respond(tablet) {
+  @include respond(tablet-large) {
     padding: 0 2*$indent-help;
   }
 
-  @include respond(desktop-all) {
+  @include respond(desktop) {
     max-width: 940px;
     padding: 0;
   }
