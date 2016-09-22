@@ -13,6 +13,7 @@
 
 .form-photo__inner {
   @include clearfix;
+
   @include respond(tablet) {
     padding: 0 2*$indent-help;
   }
@@ -27,17 +28,14 @@
 .form-photo__section {
   @include clearfix;
   margin-top: 0;
-  margin-bottom: 20px;
   padding-top: $indent-help;
+  padding-bottom: $indent-help;
   background-color: $light-gray-color;
 
   @include respond(tablet) {
-    margin-bottom: 15px;
-    padding-top: 50px;
-  }
-
-  @include respond(desktop) {
-    padding-bottom: 20px;
+    display: flex;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 }
 
@@ -49,7 +47,11 @@
 
 .form-photo__correct-container {
   @include respond(tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 48%;
+    margin-left: 20px;
   }
 
   @include respond(desktop) {
@@ -62,9 +64,13 @@
   position: relative;
   width: 280px;
   height: 374px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   overflow: hidden;
   background-color: #124578;
+
+  @include respond(mobile) {
+    margin-bottom: 40px;
+  }
 
   @include respond(tablet) {
     width: 300px;

@@ -1,82 +1,79 @@
 .reviews {
-  &__inner {
-    @include container;
-    margin-bottom: 52px;
-  }
-
-  &__content {
-    position: relative;
-    @include ul-clear;
-    padding-top: 30px;
-    height: 250px;
-    text-align: center;
-
-    @include respond(desktop) {
-      padding-top: 150px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 70px;
-        display: block;
-        width: 85px;
-        height: 70px;
-        margin-left: -35px;
-        background: yellow url("../img/quotes.svg") center center no-repeat;
-      }
+  @include respond(desktop) {
+    .slider__toggles {
+      display: none;
     }
   }
+}
 
-  &__author {
+.reviews__inner {
+  @include container;
+  margin-bottom: 52px;
+}
 
-    &-name {
-      margin-bottom: 15px;
-      font-size: 18px;
-      font-weight: bold;
+.reviews__content {
+  position: relative;
+  @include ul-clear;
+  padding-top: 30px;
+  height: 250px;
+  text-align: center;
 
-      @include respond(tablet) {
-        font-size: 20px;
-      }
+  @include respond(desktop) {
+    padding-top: 150px;
 
-      @include respond(desktop) {
-        font-size: 24px;
-      }
-    }
-
-    &-additional {
-      font-weight: normal;
-      font-size: 14px;
-
-      @include respond(mobile) {
-        display: none;
-      }
-
-      @include respond(desktop) {
-        font-size: 18px;
-      }
-    }
-  }
-
-  &__text {
-    font-size: 14px;
-    line-height: $line-height + 0.4;
-
-    @include respond(tablet) {
-      font-size: 18px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 70px;
+      display: block;
+      width: 85px;
+      height: 70px;
+      margin-left: -35px;
+      background: yellow url("../img/quotes.svg") center center no-repeat;
     }
   }
+}
 
-  &__quote {
-    &--hidden {
-      @include respond(desktop) {
-        display: none;
-      }
-    }
+.reviews__author-name {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+
+  @include respond(tablet) {
+    font-size: 20px;
   }
 
   @include respond(desktop) {
-    .slider__toggles {
+    font-size: 24px;
+  }
+}
+
+.reviews__author-additional {
+  font-weight: normal;
+  font-size: 14px;
+
+  @include respond(mobile) {
+    display: none;
+  }
+
+  @include respond(desktop) {
+    font-size: 18px;
+  }
+}
+
+.reviews__text {
+  font-size: 14px;
+  line-height: $line-height + 0.4;
+
+  @include respond(tablet) {
+    font-size: 18px;
+  }
+}
+
+.reviews__quote {
+  &--hidden {
+    @include respond(desktop) {
       display: none;
     }
   }

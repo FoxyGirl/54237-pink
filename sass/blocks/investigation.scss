@@ -6,52 +6,52 @@
   @include respond(desktop) {
     background-color: $light-gray-color;
   }
+}
 
-  &__inner {
-    @include container;
+.investigation__inner {
+  @include container;
+}
+
+.investigation__content {
+  padding-top: 90px;
+  @include clearfix;
+}
+
+.investigation__decor {
+  float: left;
+  width: 240px;
+  height: 275px;
+  margin-right: 70px;
+  background: cyan url("../img/timer.svg") 0 center no-repeat;
+
+  @include respond(desktop) {
+    width: 300px;
+    height: 345px;
+    background-color: yellow;
   }
+}
 
-  &__content {
-    padding-top: 90px;
-    @include clearfix;
+.investigation__title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: $font-family-base;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.investigation__break {
+  display: block;
+
+  @include respond(desktop) {
+    display: inline;
   }
+}
 
-  &__decor {
-    float: left;
-    width: 240px;
-    height: 275px;
-    margin-right: 70px;
-    background: cyan url("../img/timer.svg") 0 center no-repeat;
+.investigation__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-    @include respond(desktop) {
-      width: 300px;
-      height: 345px;
-      background-color: yellow;
-    }
-  }
-
-  &__title {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-family: $font-family-base;
-    font-weight: bold;
-    font-size: 30px;
-  }
-
-  &__break {
-    display: block;
-
-    @include respond(desktop) {
-      display: inline;
-    }
-  }
-
-  &__text {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-
-  &__link {
-    color: $main-brand-color;
-  }
+.investigation__link {
+  color: $main-brand-color;
 }

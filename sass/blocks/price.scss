@@ -8,120 +8,118 @@
     padding-top: 150px;
   }
 
-  &__inner {
-    @include container;
-  }
-
-  &__content {
-    height: 400px;
-  }
-
-  &__table {
-
-    @include respond(mobile) {
-      th:first-child,
-      td:first-child {
-        display: none;
-      }
-    }
-  }
-
-
-
-  &__name {
-    position: relative;
-    padding: 20px;
-    @include border-table;
-    background-color: $brand-color;
-    color: $light-color;
-
-    &-title {
-      font-size: 18px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    &--hit {
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: block;
-        width: 73px;
-        height: 73px;
-        background: transparent url("../img/bg-hit.svg") 0 0 no-repeat;
-      }
-    }
-  }
-
-  &__count {
-    font-family: $font-family-light;
-    font-size: 24px;
-    font-weight: normal;
-  }
-
-  &__currency {
-    font-size: 24px;
-    text-transform: uppercase;
-  }
-
-  &__option {
-    position: relative;
-    padding: 20px;
-    @include border-table;
-    text-transform: uppercase;
-
-    @include respond(tablet) {
-      text-align: center;
-    }
-
-    &--mobile-hidden {
-      text-align: left;
-      text-transform: none;
-    }
-
-    &-name {
-      @include respond(tablet) {
-        display: none;
-      }
-    }
-  }
-
-  &__marker {
-    float: right;
-
-    @include respond(tablet) {
-      float: none;
-    }
-
-    &--yes {
-      fill: $green-color;
-
-      @include respond(tablet) {
-        svg {
-          width: 34px;
-          height: auto;
-        }
-      }
-    }
-
-    &--no {
-      fill: $red-color;
-
-      @include respond(tablet) {
-        svg {
-          width: 30px;
-          height: auto;
-        }
-      }
-    }
-  }
-
   .slider__toggles {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0px;
+  }
+}
+
+.price__inner {
+  @include container;
+}
+
+.price__content {
+  height: 400px;
+}
+
+.price__table {
+
+  @include respond(mobile) {
+    th:first-child,
+    td:first-child {
+      display: none;
+    }
+  }
+}
+
+.price__name {
+  position: relative;
+  padding: 20px;
+  @include border-table;
+  background-color: $brand-color;
+  color: $light-color;
+
+  &--hit {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 73px;
+      height: 73px;
+      background: transparent url("../img/bg-hit.svg") 0 0 no-repeat;
+    }
+  }
+}
+
+.price__name-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.price__count {
+  font-family: $font-family-light;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.price__currency {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.price__option {
+  position: relative;
+  padding: 20px;
+  @include border-table;
+  text-transform: uppercase;
+
+  @include respond(tablet) {
+    text-align: center;
+  }
+
+  &--mobile-hidden {
+    text-align: left;
+    text-transform: none;
+  }
+}
+
+.price__option-name {
+  @include respond(tablet) {
+    display: none;
+  }
+}
+
+.price__marker {
+  float: right;
+
+  @include respond(tablet) {
+    float: none;
+  }
+
+  &--yes {
+    fill: $green-color;
+
+    @include respond(tablet) {
+      svg {
+        width: 34px;
+        height: auto;
+      }
+    }
+  }
+
+  &--no {
+    fill: $red-color;
+
+    @include respond(tablet) {
+      svg {
+        width: 30px;
+        height: auto;
+      }
+    }
   }
 }

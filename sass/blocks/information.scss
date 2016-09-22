@@ -1,117 +1,114 @@
 .information {
   text-align: center;
+}
 
-  &__inner {
-    @include container;
-    padding-top: 37px;
+.information__inner {
+  @include container;
+  padding-top: 37px;
+}
+
+.information__introduction {
+  margin-bottom: 30px;
+  padding-top: 50px;
+  font-family: $font-family-light;
+  text-align: center;
+  font-size: 24px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.information__decorator {
+  position: relative;
+  background-color: $light-gray-color;
+}
+
+.information__list {
+  @include  ul-clear;
+  position: relative;
+  padding-top: 63px;
+  padding-bottom: 290px;
+
+  @include respond(tablet) {
+    float: right;
+    width: 51%;
+    padding-bottom: 20px;
+    padding-top: 103px;
   }
 
-  &__introduction {
-    margin-bottom: 30px;
-    padding-top: 50px;
-    font-family: $font-family-light;
-    text-align: center;
-    font-size: 24px;
-
-    p {
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
+  @include respond(desktop) {
+    float: none;
+    width: 100%;
+    padding-bottom: 20px;
   }
 
-  &__decorator {
-    position: relative;
-    background-color: $light-gray-color;
-  }
-
-  &__list {
-    @include  ul-clear;
-    position: relative;
-    padding-top: 63px;
-    padding-bottom: 290px;
+  &::after  {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 280px;
+    z-index: 2;
+    background: transparent url("../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
 
     @include respond(tablet) {
-      float: right;
-      width: 51%;
-      padding-bottom: 20px;
-      padding-top: 103px;
+      left: -100%;
+      width: 270px;
+      height: 480px;
+      -webkit-background-size:  270px auto;
+      background-size: 270px auto;
     }
+  }
+}
 
-    @include respond(desktop) {
-      float: none;
-      width: 100%;
-      padding-bottom: 20px;
-    }
+.information__item {
+  position: relative;
+  margin-bottom: 25px;
 
-    &::after  {
+  @include respond(desktop) {
+    float: left;
+    width: 33.333%;
+    padding-top: 260px;
+
+    &::before {
       content: "";
+      display: block;
+      width: 280px;
+      height: 300px;
       position: absolute;
+      top: -100px;
       left: 0;
       right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 280px;
       z-index: 2;
       background: transparent url("../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
-
-      @include respond(tablet) {
-        left: -100%;
-        width: 270px;
-        height: 480px;
-        -webkit-background-size:  270px auto;
-        background-size: 270px auto;
-        /*
-        display: none;
-        */
-      }
+      -webkit-background-size: 180px auto;
+      background-size: 180px auto;
+      border-bottom: 1px solid gray;
     }
   }
 
-  &__item {
-    position: relative;
-    margin-bottom: 25px;
-
-    @include respond(desktop) {
-      float: left;
-      width: 33.333%;
-      padding-top: 260px;
-
-      &::before {
-        content: "";
-        display: block;
-        width: 280px;
-        height: 300px;
-        position: absolute;
-        top: -100px;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        background: transparent url("../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
-        -webkit-background-size: 180px auto;
-        background-size: 180px auto;
-        border-bottom: 1px solid gray;
-      }
-    }
-
-    p {
-      line-height: $line-height;
-
-      @include respond(desktop) {
-        padding-left: $indent-help;
-        padding-right: $indent-help;
-      }
-    }
-  }
-
-  &__title {
-    margin-top: 15px;
-    margin-bottom: 13px;
-    font-size: 18px;
-    font-weight: bold;
+  p {
+    line-height: $line-height;
 
     @include respond(desktop) {
       padding-left: $indent-help;
       padding-right: $indent-help;
     }
+  }
+}
+
+.information__title {
+  margin-top: 15px;
+  margin-bottom: 13px;
+  font-size: 18px;
+  font-weight: bold;
+
+  @include respond(desktop) {
+    padding-left: $indent-help;
+    padding-right: $indent-help;
   }
 }

@@ -20,16 +20,16 @@
   border: none;
   outline: none;
 
-  &--close {
-    background-image: url('../img/icon-menu-cross.svg');
-  }
-
   @include respond(tablet) {
     margin: 2*$indent-help;
   }
 
   @include respond(desktop) {
     display: none;
+  }
+
+  &--close {
+    background-image: url('../img/icon-menu-cross.svg');
   }
 }
 

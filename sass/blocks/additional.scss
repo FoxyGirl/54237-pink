@@ -18,9 +18,9 @@
   }
 
   @include respond(tablet-only) {
-      br {
-        display: none;
-      }
+    br {
+      display: none;
+    }
   }
 
   @include respond(desktop) {

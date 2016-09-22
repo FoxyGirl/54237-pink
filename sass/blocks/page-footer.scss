@@ -1,6 +1,10 @@
 .page-footer {
   padding-top: 40px;
   text-align: center;
+
+  @include respond(desktop) {
+    padding-top: 100px;
+  }
 }
 
 .page-footer--mobile-none {
@@ -21,9 +25,11 @@
     width: 25%;
     margin-bottom: 19px;
   }
-  
-  svg {
-    float: left;
+
+  @include respond(desktop) {
+    svg {
+      float: left;
+    }
   }
 }
 

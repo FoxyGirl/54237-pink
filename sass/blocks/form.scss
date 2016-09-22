@@ -1,5 +1,6 @@
 .form__inner {
   @include container;
+
   @include respond(mobile) {
     padding-left: 0;
     padding-right: 0;
@@ -262,11 +263,11 @@
 
   &--photo {
     @include respond(tablet) {
-      padding-top: 35px;
+      padding-top: 0;
     }
 
     @include respond(desktop) {
-      padding-top: 60px;
+      margin-right: 55px;
     }
   }
 }

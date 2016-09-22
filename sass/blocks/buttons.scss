@@ -45,7 +45,10 @@
 
   @include respond(desktop) {
     min-width: 178px;
-    margin-right: 22px;
+    margin-right: 46px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 0;
   }
 
   &:hover {
@@ -79,12 +82,12 @@
 
   @include respond(tablet) {
     min-width: 255px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 
   @include respond(desktop) {
     min-width: 178px;
-    margin-right: 22px;
+    margin-right: 0;
   }
 }
 
