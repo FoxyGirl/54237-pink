@@ -47,5 +47,10 @@
       padding-top: 50px;
       padding-bottom: 50px;
     }
+
+    @include respond(desktop) {
+      padding-top: 0;
+      padding-bottom: 50px;
+    }
   }
 }

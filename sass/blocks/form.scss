@@ -258,10 +258,15 @@
 
 .form__submit {
   text-align: center;
+  padding-top: 5px;
 
   &--photo {
     @include respond(tablet) {
-      padding-top: 40px;
+      padding-top: 35px;
+    }
+
+    @include respond(desktop) {
+      padding-top: 60px;
     }
   }
 }

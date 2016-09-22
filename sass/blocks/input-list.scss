@@ -9,8 +9,13 @@
 
   &--correct {
     @include respond(tablet) {
-      padding-right: 20px;
+      padding-right: 15px;
       padding-left: 20px;
+    }
+
+    @include respond(desktop) {
+      padding-right: 55px;
+      padding-left: 0px;
     }
   }
 
@@ -38,6 +43,7 @@
 
   &--underline {
     border-bottom: 1px solid transparent;
+    text-align: left;
 
     @include respond(tablet) {
       border-bottom: 1px solid rgba($brand-color, 0.1);

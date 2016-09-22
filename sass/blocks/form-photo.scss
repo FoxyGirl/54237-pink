@@ -9,16 +9,6 @@
   @include respond(desktop) {
     background-color: $light-color;
   }
-
-  .form__section--gray {
-    margin-top: 0;
-    margin-bottom: 25px;
-    background-color: $light-gray-color;
-
-    @include respond(tablet) {
-      margin-bottom: 15px;
-    }
-  }
 }
 
 .form-photo__inner {
@@ -34,6 +24,23 @@
   }
 }
 
+.form-photo__section {
+  @include clearfix;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: $indent-help;
+  background-color: $light-gray-color;
+
+  @include respond(tablet) {
+    margin-bottom: 15px;
+    padding-top: 50px;
+  }
+
+  @include respond(desktop) {
+    padding-bottom: 20px;
+  }
+}
+
 .form-photo__photo-container {
   @include respond(tablet) {
     width: 48%;
@@ -43,6 +50,10 @@
 .form-photo__correct-container {
   @include respond(tablet) {
     width: 48%;
+  }
+
+  @include respond(desktop) {
+    width: 52%;
   }
 }
 
@@ -89,15 +100,27 @@
   }
 
   @include respond(tablet) {
+    svg {
+      fill: $main-brand-color;
+    }
+  }
+
+  @include respond(tablet-only) {
     float: left;
     width: 24px;
     height: 24px;
     margin-right: 12px;
-    margin-left: 0;
+    margin-left: 5px;
     margin-top: 15px;
 
+    &[for="contrast"] {
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
     svg {
-      fill: $main-brand-color;
       width: 24px;
       height: 24px;
     }

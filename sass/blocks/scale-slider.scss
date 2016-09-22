@@ -18,6 +18,12 @@
     width: 202px;
     margin-top: 27px;
     margin-bottom: 20px;
+    margin-right: 5px;
+  }
+
+  @include respond(desktop) {
+    width: 288px;
+    margin-right: 35px;
   }
 
   &--crop {
