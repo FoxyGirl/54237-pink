@@ -1,23 +1,51 @@
-.additional {
-  &__inner {
-    @include container;
+.additional__inner {
+  @include container;
+}
+
+.additional__text {
+  margin: 0;
+  padding: 45px 0 50px;
+  text-align: center;
+  line-height: $line-height + 0.4;
+
+  @include respond(tablet) {
+    padding-right: 55px;
+    padding-left: 55px;
+    padding-top: 90px;
+    padding-bottom: 76px;
+    font-size: 18px;
+    line-height: $line-height;
   }
 
-  &__text {
-    margin: 0;
-    padding: 45px 0 50px;
-    text-align: center;
-    line-height: $line-height + 0.4;
+  @include respond(tablet-only) {
+      br {
+        display: none;
+      }
+  }
 
-    @include respond(tablet) {
-      padding-right: 55px;
-      padding-left: 55px;
-      font-size: 18px;
+  @include respond(desktop) {
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-top: 90px;
+    padding-bottom: 85px;
+    line-height: $line-height;
+  }
+
+  &--br {
+    @include respond(tablet-only) {
+      br {
+        display: inline;
+      }
     }
+  }
 
-    @include respond(desktop) {
-      padding-right: 80px;
-      padding-left: 80px;
+  &--second {
+    padding-top: 25px;
+    padding-bottom: 40px;
+
+    @include respond(tablet-only) {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
 }

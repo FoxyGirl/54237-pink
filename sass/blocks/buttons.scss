@@ -47,6 +47,16 @@
     min-width: 178px;
     margin-right: 22px;
   }
+
+  &:hover {
+    color: $light-color;
+    background-color: $main-brand-color;
+  }
+
+  &:active {
+    color: rgba($light-color, 0.3);
+    background-color: $main-brand-color;
+  }
 }
 
 .btn--reset {
@@ -58,6 +68,12 @@
   opacity: 0.1;
 
   &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: $light-color;
+    background-color: $brand-color;
     opacity: 1;
   }
 

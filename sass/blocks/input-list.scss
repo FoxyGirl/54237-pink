@@ -4,21 +4,46 @@
 
   @include respond(mobile) {
     padding-bottom: 70px;
+    border-bottom: 1px solid rgba($brand-color, 0.1);
+  }
+
+  &--correct {
+    @include respond(tablet) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
 
   &--line {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+     text-align: center;
+     margin-bottom: 30px;
 
-  &__item {
-    @include clearfix;
+     @incude respond(tablet) {
+       margin-bottom: 20px;
+     }
+   }
+}
+
+
+.input-list__item {
+  @include clearfix;
+
+  &--line {
 
     @include respond(mobile) {
-      &--line {
-        display: inline-block;
-        vertical-align: top;
-      }
+      display: inline-block;
+      vertical-align: top;
     }
   }
+
+  &--underline {
+    border-bottom: 1px solid transparent;
+
+    @include respond(tablet) {
+      border-bottom: 1px solid rgba($brand-color, 0.1);
+    }
+  }
+
 }
+
+
