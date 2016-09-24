@@ -20,6 +20,10 @@
 .page-footer__logo {
   margin-bottom: 35px;
 
+  @include respond(mobile) {
+    margin-top: 20px;
+  }
+
   @include respond(tablet) {
     float: left;
     width: 25%;
@@ -65,6 +69,10 @@
 
     &:hover {
       fill: $brand-color;
+    }
+
+    &:active {
+      fill: rgba($brand-color, 0.3);
     }
   }
 }

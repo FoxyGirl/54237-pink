@@ -102,12 +102,22 @@
 
   svg {
     @include zero-centered;
-    fill: $dark-gray-color;
+    fill: rgba($brand-color, 0.3);
+  }
+
+  &:hover {
+    svg {
+      fill: rgba($brand-color, 0.5);
+    }
   }
 
   @include respond(tablet) {
     svg {
       fill: $main-brand-color;
+
+      &:hover {
+        fill: rgba($brand-color, 0.5);
+      }
     }
   }
 

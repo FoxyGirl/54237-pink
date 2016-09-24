@@ -27,7 +27,7 @@
     padding-right: 80px;
     padding-left: 80px;
     padding-top: 90px;
-    padding-bottom: 85px;
+    padding-bottom: 75px;
     line-height: $line-height;
   }
 
@@ -37,6 +37,19 @@
         display: inline;
       }
     }
+  }
+
+  &--concurs {
+    padding-bottom: 25px;
+
+    @include respond(mobile) {
+      padding-bottom: 10px;
+    }
+
+    @include respond(desktop) {
+      padding-bottom: 75px;
+    }
+
   }
 
   &--second {

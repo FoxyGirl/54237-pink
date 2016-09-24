@@ -7,11 +7,19 @@
 
   @include respond(tablet) {
     width: 460px;
+
+    .btn--submit {
+      min-width: 300px;
+    }
   }
 
   &--success {
     @include respond(desktop) {
       width: 780px;
+
+      .btn--submit {
+        min-width: 460px;
+      }
     }
 
     .pop-up__inner {
@@ -27,7 +35,7 @@
   padding: $indent-help;
 
   @include respond(tablet) {
-    padding: 30px 70px 20px;
+    padding: 30px 70px 10px;
   }
 
   @include respond(desktop) {
@@ -37,17 +45,28 @@
 
 .pop-up__title {
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 5px;
+  font-size: 18px;
 
   @include respond(tablet) {
+    padding-right: 40px;
+    padding-left: 40px;
     font-size: 30px;
+  }
+
+  @include respond(desktop) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .pop-up__content {
   margin-bottom: 30px;
   font-size: 14px;
-  line-height: $line-height;
+
+  @include respond(mobile) {
+    line-height: $line-height;
+  }
 
   @include respond(tablet) {
     font-size: 18px;
@@ -55,9 +74,14 @@
 }
 
 .pop-up__button-block {
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   &--gray {
     background-color: $light-gray-color;
+  }
+
+  .btn--submit {
+    margin-bottom: 0;
   }
 }

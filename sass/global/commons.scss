@@ -11,9 +11,30 @@ body {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   left: -9999px;
+}
+
+.show-span {
+  display: none;
+
+  &--desktop {
+    @include respond(desktop) {
+      display: inline;
+    }
+  }
+
+  &--mobile {
+    @include respond(mobile) {
+      display: inline;
+    }
+  }
 }
 
 .triangle-top {
@@ -31,7 +52,16 @@ body {
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+@keyframes color_change {
+  0% {
+    color: rgba($light-color, 0.3);
+  }
+
+  50% {
+    color: rgba($light-color, 0.7);
+  }
+
+  100% {
+    color: rgba($light-color, 0.3);
+  }
 }
