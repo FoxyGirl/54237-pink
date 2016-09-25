@@ -11,7 +11,7 @@
     background-size: cover;
 
     @include respond(tablet) {
-      height: 370px;
+      height: 380px;
     }
 
     @include respond(desktop) {
@@ -28,6 +28,10 @@
       height: 36px;
       margin-left: -18px;
       background: transparent url(../img/icon-map-marker.svg) center center no-repeat;
+
+      @include respond(tablet) {
+        top: 52%;
+      }
     }
   }
 }

@@ -4,19 +4,39 @@
 
 .information__inner {
   @include container;
-  padding-top: 37px;
 }
 
 .information__introduction {
-  margin-bottom: 30px;
-  padding-top: 50px;
+  margin-bottom: 16px;
+  padding-top: 38px;
   font-family: $font-family-light;
   text-align: center;
   font-size: 24px;
 
+  @include respond(tablet) {
+    margin-bottom: 40px;
+    padding-top: 48px;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 70px;
+    padding-top: 65px;
+  }
+
   p {
     margin-top: 0;
     margin-bottom: 20px;
+    line-height: 1.35;
+
+    @include respond(tablet) {
+      margin-bottom: 0;
+      font-size: 40px;
+      line-height: 1.25;
+    }
+
+    @include respond(desktop) {
+      font-size: 50px;
+    }
   }
 }
 
@@ -31,16 +51,16 @@
   padding-top: 63px;
   padding-bottom: 290px;
 
-  @include respond(tablet) {
+  @include respond(tablet-only) {
     float: right;
-    width: 51%;
+    width: 50%;
     padding-bottom: 20px;
-    padding-top: 103px;
+    padding-top: 63px;
+    padding-bottom: 10px;
+    text-align: left;
   }
 
   @include respond(desktop) {
-    float: none;
-    width: 100%;
     padding-bottom: 20px;
   }
 
@@ -69,10 +89,18 @@
   position: relative;
   margin-bottom: 25px;
 
+  @include respond(tablet) {
+    margin-bottom: 30px;
+  }
+
   @include respond(desktop) {
     float: left;
     width: 33.333%;
-    padding-top: 260px;
+    padding-top: 280px;
+
+    &:nth-child(3n) {
+      float: right;
+    }
 
     &::before {
       content: "";
@@ -80,8 +108,8 @@
       width: 280px;
       height: 300px;
       position: absolute;
-      top: -100px;
-      left: 0;
+      top: -63px;
+      left: 18px;
       right: 0;
       z-index: 2;
       background: transparent url("../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
@@ -92,23 +120,27 @@
   }
 
   p {
+    margin-top: 0;
     line-height: $line-height;
 
     @include respond(desktop) {
-      padding-left: $indent-help;
-      padding-right: $indent-help;
+      padding-left: 35px;
+      padding-right: 35px;
     }
   }
 }
 
 .information__title {
   margin-top: 15px;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   font-size: 18px;
   font-weight: bold;
 
   @include respond(desktop) {
-    padding-left: $indent-help;
-    padding-right: $indent-help;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 30px;
+    line-height: 1;
   }
 }

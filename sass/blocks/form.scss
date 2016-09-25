@@ -406,16 +406,6 @@
     margin-bottom: 0;
   }
 
-  &--text {
-    &:hover {
-      border-color: $brand-color;
-    }
-
-    &:focus {
-      border-color: $main-brand-color;
-    }
-  }
-
   &--phone {
     @include respond(tablet) {
       padding-right: 80px;
@@ -515,6 +505,14 @@
   textarea {
     @include  placeholder-color($brand-color);
     font-size: 18px;
+
+    &:hover {
+      border-color: $brand-color;
+    }
+
+    &:focus {
+      border-color: $main-brand-color;
+    }
   }
 
   textarea {

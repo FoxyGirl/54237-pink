@@ -1,5 +1,6 @@
 .main-nav {
   @include clearfix;
+  background-color: transparent;
 
   &--opened {
     background-color: $brand-color;
