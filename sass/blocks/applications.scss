@@ -10,65 +10,99 @@
 
   @include respond(tablet) {
     float: left;
-    width: 50%;
+    width: 48%;
     background-color: transparent;
   }
 
-  &__title {
-    display: none;
-    margin-top: 35px;
-    margin-bottom: 55px;
-    font-family: $font-family-light;
-    font-weight: normal;
-    font-size: 50px;
-
-    @include respond(tablet) {
-      display: block;
-    }
+  @include respond(desktop) {
+    width: 32%;
   }
+}
 
-  &__list {
-    @include ul-clear;
-    text-align: center;
-  }
+.applications__title {
+  display: none;
+  margin-top: 93px;
+  margin-bottom: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: $font-family-light;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 1.2;
 
-  &__item {
-    display: inline-block;
-    vertical-align: middle;
-    width: 60px;
-    height: 60px;
-    margin: 0 8px;
-  }
-
-  &__link {
+  @include respond(tablet) {
     display: block;
-    height: 100%;
-    font-size: 0;
-    background-color: transparent;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    &--mac {
-      background-image: url('../../img/logo-apple.svg');
-    }
-
-    &--android {
-      background-image: url('../../img/logo-android.svg');
-      background-position: center 11px;
-    }
-
-    &--windows {
-      background-image: url('../../img/logo-microsoft.svg');
-      background-position: center 14px;
-    }
   }
 
-  &__text {
-    margin-top: 20px;
-    margin-bottom: 0;
-    padding-right: $indent-help;
-    padding-left: $indent-help;
-    padding-bottom: 30px;
-    line-height: $line-height;
+  @include respond(desktop) {
+    margin-top: 110px;
+    margin-bottom: 25px;
+    font-size: 50px;
+  }
+}
+
+.applications__list {
+  @include ul-clear;
+  text-align: center;
+
+  @include respond(tablet) {
+    margin-bottom: 32px;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.applications__item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  margin: 0 8px;
+}
+
+.applications__link {
+  display: block;
+  height: 100%;
+  font-size: 0;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &--mac {
+    background-image: url('../img/logo-apple.svg');
+  }
+
+  &--android {
+    background-image: url('../img/logo-android.svg');
+    background-position: center 11px;
+  }
+
+  &--windows {
+    background-image: url('../img/logo-microsoft.svg');
+    background-position: center 14px;
+  }
+}
+
+.applications__text {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding-right: $indent-help;
+  padding-left: $indent-help;
+  padding-bottom: 30px;
+  font-family: $font-family-light;
+  line-height: $line-height;
+
+  @include respond(tablet) {
+    margin-bottom: 75px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 90px;
   }
 }

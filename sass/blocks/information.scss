@@ -1,117 +1,146 @@
 .information {
   text-align: center;
+}
 
-  &__inner {
-    @include container;
-    padding-top: 37px;
+.information__inner {
+  @include container;
+}
+
+.information__introduction {
+  margin-bottom: 16px;
+  padding-top: 38px;
+  font-family: $font-family-light;
+  text-align: center;
+  font-size: 24px;
+
+  @include respond(tablet) {
+    margin-bottom: 40px;
+    padding-top: 48px;
   }
 
-  &__introduction {
-    margin-bottom: 30px;
-    padding-top: 50px;
-    font-family: $font-family-light;
-    text-align: center;
-    font-size: 24px;
-
-    p {
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
+  @include respond(desktop) {
+    margin-bottom: 70px;
+    padding-top: 65px;
   }
 
-  &__decorator {
-    position: relative;
-    background-color: $light-gray-color;
-  }
-
-  &__list {
-    @include  ul-clear;
-    position: relative;
-    padding-top: 63px;
-    padding-bottom: 290px;
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.35;
 
     @include respond(tablet) {
+      margin-bottom: 0;
+      font-size: 40px;
+      line-height: 1.25;
+    }
+
+    @include respond(desktop) {
+      font-size: 50px;
+    }
+  }
+}
+
+.information__decorator {
+  position: relative;
+  background-color: $light-gray-color;
+}
+
+.information__list {
+  @include  ul-clear;
+  position: relative;
+  padding-top: 63px;
+  padding-bottom: 290px;
+
+  @include respond(tablet-only) {
+    float: right;
+    width: 50%;
+    padding-bottom: 20px;
+    padding-top: 63px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+
+  @include respond(desktop) {
+    padding-bottom: 20px;
+  }
+
+  &::after  {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 280px;
+    z-index: 2;
+    background: transparent url("../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
+
+    @include respond(tablet) {
+      left: -100%;
+      width: 270px;
+      height: 480px;
+      -webkit-background-size:  270px auto;
+      background-size: 270px auto;
+    }
+  }
+}
+
+.information__item {
+  position: relative;
+  margin-bottom: 25px;
+
+  @include respond(tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include respond(desktop) {
+    float: left;
+    width: 33.333%;
+    padding-top: 280px;
+
+    &:nth-child(3n) {
       float: right;
-      width: 51%;
-      padding-bottom: 20px;
-      padding-top: 103px;
     }
 
-    @include respond(desktop-all) {
-      float: none;
-      width: 100%;
-      padding-bottom: 20px;
-    }
-
-    &::after  {
+    &::before {
       content: "";
+      display: block;
+      width: 280px;
+      height: 300px;
       position: absolute;
-      left: 0;
+      top: -63px;
+      left: 18px;
       right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 280px;
       z-index: 2;
-      background: transparent url("../../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
-
-      @include respond(tablet) {
-        left: -100%;
-        width: 270px;
-        height: 480px;
-        -webkit-background-size:  270px auto;
-        background-size: 270px auto;
-        /*
-        display: none;
-        */
-      }
+      background: transparent url("../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
+      -webkit-background-size: 180px auto;
+      background-size: 180px auto;
+      border-bottom: 1px solid gray;
     }
   }
 
-  &__item {
-    position: relative;
-    margin-bottom: 25px;
+  p {
+    margin-top: 0;
+    line-height: $line-height;
 
-    @include respond(desktop-all) {
-      float: left;
-      width: 33.333%;
-      padding-top: 260px;
-
-      &::before {
-        content: "";
-        display: block;
-        width: 280px;
-        height: 300px;
-        position: absolute;
-        top: -100px;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        background: transparent url("../../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
-        -webkit-background-size: 180px auto;
-        background-size: 180px auto;
-        border-bottom: 1px solid gray;
-      }
-    }
-
-    p {
-      line-height: $line-height;
-
-      @include respond(desktop-all) {
-        padding-left: $indent-help;
-        padding-right: $indent-help;
-      }
+    @include respond(desktop) {
+      padding-left: 35px;
+      padding-right: 35px;
     }
   }
+}
 
-  &__title {
-    margin-top: 15px;
-    margin-bottom: 13px;
-    font-size: 18px;
-    font-weight: bold;
+.information__title {
+  margin-top: 15px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: bold;
 
-    @include respond(desktop-all) {
-      padding-left: $indent-help;
-      padding-right: $indent-help;
-    }
+  @include respond(desktop) {
+    margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 30px;
+    line-height: 1;
   }
 }

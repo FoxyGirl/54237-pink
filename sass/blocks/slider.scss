@@ -1,29 +1,61 @@
 .slider {
   position: relative;
   overflow: hidden;
+}
 
-  &__item {
-    position: absolute;
-    width: 100%;
+.slider__item {
+  position: absolute;
+  width: 100%;
+}
+
+.slider__toggles {
+  padding: 10px;
+  text-align: center;
+}
+
+.slider__toggle {
+  display: inline-block;
+  vertical-align: top;
+  width: 6px;
+  height: 6px;
+  margin: 10px 9px;
+  background-color: rgba($brand-color, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($brand-color, 0.7);
   }
 
-  &__toggles {
-    padding: 10px;
-    text-align: center;
+  &:active {
+    background-color: rgba($brand-color, 0.1);
   }
 
-  &__toggle {
-    display: inline-block;
-    vertical-align: top;
-    width: 7px;
-    height: 7px;
-    margin: 10px 5px;
-    background-color: $gray-color;
-    border: 3px $light-color solid;
-    border-radius: 50%;
+  &--active {
+    background-color: $light-color;
+    box-shadow: 0 0 0 3px $brand-color;
+  }
+}
 
-    &--active {
-      border-color: #000;
-    }
+.slider__controls {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+}
+
+.slider__control {
+  position: absolute;
+  top: 0;
+  width: 22px;
+  height: 42px;
+  background-color: magenta;
+  cursor: pointer;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
   }
 }

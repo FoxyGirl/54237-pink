@@ -9,7 +9,7 @@
   <body>
     <header class="page-header  page-header--bg-position">
     <div class="page-header__up">
-      <div class="page-header__inner-up">
+      <div class="page-header__up-inner">
         <div class="page-header__logo">
           <a href="index.html" class="page-header__logo-link">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
@@ -51,16 +51,17 @@
     <div class="main">
       <div class="additional">
         <div class="additional__inner">
-          <p class="additional__text">
+          <p class="additional__text  additional__text--concurs">
             Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+            <!-- -->
             Пожалуйста, заполните форму ниже:
           </p>
         </div>
       </div>
       <section class="form">
         <form class="form" action="http://example.org/" method="post" name="form-contest">
-          <div class="form__inner">
-            <div class="form__section">
+          <div class="form__inner   form__inner--flex">
+            <div class="form__section  form__section--name">
               <div class="form__item">
                 <label class="form__label" for="surname">Фамилия:</label>
                 <input class="form__input  form__input--text" type="text" placeholder="Укажите фамилию" name="surname" id="surname">
@@ -74,65 +75,71 @@
                 <input class="form__input  form__input--text" type="text" placeholder="Ну и отчество тоже" name="fatherName" id="fatherName">
               </div>
             </div>
-            <fieldset class="form__section  form__section--gray  form__section--columns-3">
-              <legend class="form__legend">
+            <div class="form__section  form__section--achievements  form__section--gray  form__section--fieldset">
+              <div class="form__legend">
                 Ваши безбашенные достижения в путешествии
-              </legend>
-              <div class="form__item">
-                <label class="form__label form__label--checkbox  form__label--control-text">
-                  <input type="checkbox" name="selfie_with_shark" checked>
-                  <span>Сделал селфи с акулой</span>
-                </label>
               </div>
-              <div class="form__item">
-                <label class="form__label form__label--checkbox  form__label--control-text">
-                  <input type="checkbox" name="burn_on_sun" checked>
-                  <span>Обгорел на пляже</span>
-                </label>
+              <div class="form__item-group">
+                <div class="form__item">
+                  <label class="form__label form__label--checkbox  form__label--control-text">
+                    <input type="checkbox" name="selfie_with_shark" checked>
+                    <span>Сделал селфи с акулой</span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label class="form__label form__label--checkbox  form__label--control-text">
+                    <input type="checkbox" name="burn_on_sun" checked>
+                    <span>Обгорел на пляже</span>
+                  </label>
+                </div>
               </div>
-              <div class="form__item">
-                <label class="form__label form__label--checkbox  form__label--control-text">
-                  <input type="checkbox" name="see_norris">
-                  <span>Видел Чака Норриса</span>
-                </label>
+              <div class="form__item-group">
+                <div class="form__item">
+                  <label class="form__label form__label--checkbox  form__label--control-text">
+                    <input type="checkbox" name="see_norris">
+                    <span>Видел Чака Норриса</span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label class="form__label form__label--checkbox  form__label--control-text">
+                    <input type="checkbox" name="buy_souvenirs">
+                    <span>Накупил сувениров</span>
+                  </label>
+                </div>
               </div>
-              <div class="form__item">
-                <label class="form__label form__label--checkbox  form__label--control-text">
-                  <input type="checkbox" name="buy_souvenirs">
-                  <span>Накупил сувениров</span>
-                </label>
+              <div class="form__item-group">
+                <div class="form__item">
+                  <label class="form__label form__label--checkbox  form__label--control-text">
+                    <input type="checkbox" name="kept_tower" checked>
+                    <span>Удержал башню</span>
+                  </label>
+                </div>
+                <div class="form__item">
+                  <label class="form__label form__label--checkbox  form__label--control-text">
+                    <input type="checkbox" name="break_hotel">
+                    <span>Разгромил отель</span>
+                  </label>
+                </div>
               </div>
-              <div class="form__item">
-                <label class="form__label form__label--checkbox  form__label--control-text">
-                  <input type="checkbox" name="kept_tower" checked>
-                  <span>Удержал башню</span>
-                </label>
-              </div>
-              <div class="form__item">
-                <label class="form__label form__label--checkbox  form__label--control-text">
-                  <input type="checkbox" name="break_hotel">
-                  <span>Разгромил отель</span>
-                </label>
-              </div>
-            </fieldset>
+            </div>
 
-            <fieldset class="form__section form__section--colums-2">
-              <legend class="form__legend">
+            <div class="form__section  form__section--contacts  form__section--fieldset">
+              <div class="form__legend">
                 Контактная информация
-              </legend>
-              <div class="form__item">
-                <label class="form__label" for="phone">Номерок телефончика</label>
+              </div>
+              <div class="form__item  form__item--phone">
+                <label class="form__label" for="phone">Номер<span class="show-span show-span--mobile">ок</span> телефончика</label>
                 <input class="form__input  form__input--phone" type="tel" placeholder="Номер, пожалуйста" name="phone" id="phone">
               </div>
               <div class="form__item">
-                <label class="form__label" for="email">адресок почты</label>
+                <label class="form__label" for="email">адрес<span class="show-span show-span--mobile">ок</span> почты</label>
                 <input class="form__input  form__input--email" type="email" placeholder="Введите почту" name="email" id="email">
               </div>
-            </fieldset>
-            <fieldset class="form__section  form__section--gray">
-              <legend class="form__legend">
+            </div>
+            <div class="form__section  form__section--application  form__section--gray  form__section--fieldset">
+              <div class="form__legend">
                 С каким приложением путешествовали?
-              </legend>
+              </div>
               <div class="form__item">
                 <label class="form__label  form__label--radio  form__label--control-text">
                   <input type="radio" name="application_type" value="iOS" checked>
@@ -151,25 +158,25 @@
                   <span>Windows Phone</span>
                 </label>
               </div>
-            </fieldset>
-            <fieldset class="form__section">
-              <legend class="form__legend">
+            </div>
+            <div class="form__section  form__section--description  form__section--fieldset">
+              <div class="form__legend">
                 Опишите свои эмоции
-              </legend>
+              </div>
               <div class="form__item">
                 <textarea class="form__input  form__input--text-area" name="emotions" id="emotions"
-                          cols="30" rows="8"
+                          cols="30" rows="3"
                           placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </div>
-            </fieldset>
-            <div class="form__submit">
-          <button class="btn btn--submit btn--big-form" type="submit">Отправить форму</button>
-          <div class="form__info">
-            <span class="form__required">*</span> &mdash; обязательные <span class="form__info-add form__info-add--hidden">для заполнения</span> поля
+            </div>
+            <div class="form__submit  form__submit--contest">
+              <button class="btn btn--submit  btn--big-form  btn--in-progress" type="submit">Отправить форму</button>
+              <div class="form__info">
+                <span class="form__required">*</span> &mdash; обязательные <span class="show-span show-span--desktop">для заполнения</span> поля
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
-      </form>
+        </form>
       </section>
     </div>
     <footer class="page-footer">
@@ -209,22 +216,22 @@
 
     <section class="pop-up" id="failure">
       <div class="pop-up__inner">
-        <h4 class="pop-up__title">
+        <h2 class="pop-up__title">
           Что-то пошло не так!
-        </h4>
+        </h2>
         <div class="pop-up__content">
           <p>
             Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
           </p>
         </div>
-        <button class="btn btn--submit" type="button">Ок</button>
+        <button class="btn  btn--submit" type="button">Ок</button>
       </div>
     </section>
     <section class="pop-up  pop-up--success" id="success">
       <div class="pop-up__inner">
-        <h4 class="pop-up__title">
+        <h2 class="pop-up__title">
           Ваша заявка отправлена
-        </h4>
+        </h2>
         <div class="pop-up__content">
           <p>
             Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее
@@ -233,7 +240,7 @@
         </div>
       </div>
       <div class="pop-up__button-block  pop-up__button-block--gray">
-        <button class="btn btn--submit" type="button">Закрыть окно</button>
+        <button class="btn  btn--submit" type="button">Закрыть окно</button>
       </div>
     </section>
     <script src="js/adaptive-menu.js"></script>

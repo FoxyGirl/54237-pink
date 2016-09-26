@@ -9,7 +9,7 @@
   <body>
     <header class="page-header  page-header--bg-position">
       <div class="page-header__up">
-        <div class="page-header__inner-up">
+        <div class="page-header__up-inner">
           <div class="page-header__logo">
             <a href="index.html" class="page-header__logo-link">
               <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
@@ -23,28 +23,28 @@
             </a>
           </div>
           <nav class="main-nav  main-nav--opened">
-          <button class="main-nav__toggler  main-nav__toggler--close" type="button"
-                  id="navToggler"></button>
-          <ul class="main-nav__list  main-nav__list--opened" id="mainNav">
-            <li class="main-nav__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item  main-nav__item--active">
-              <a>Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
+            <button class="main-nav__toggler  main-nav__toggler--close" type="button"
+                    id="navToggler"></button>
+            <ul class="main-nav__list  main-nav__list--opened" id="mainNav">
+              <li class="main-nav__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item  main-nav__item--active">
+                <a>Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
       <div class="page-header__inner">
         <h1 class="page-header__title">
-          Фотографии пользователей
+          Фотографии <br>пользователей
         </h1>
       </div>
     </header>
@@ -59,7 +59,7 @@
       </div>
       <section class="photos">
         <div class="photos__panorama">
-          <div class="photos__image  photos__image--panorama" data-title="ПАНОРАМА ДНЯ">
+          <div class="photos__image  photos__image--panorama" data-title="Панорама дня">
             <img class="photos__image" src="img/panorama-mobile@1x.jpg" alt="" width="320" height="137">
           </div>
         </div>
@@ -80,7 +80,9 @@
                     </g>
                   </svg>
                 </span>
-                Нравится: <span class="photos__like-count">215</span>
+                <span class="photos__like-text">
+                  Нравится: <span class="photos__like-count">215</span>
+                </span>
               </div>
             </div>
           </div>
@@ -108,7 +110,9 @@
                       </g>
                     </svg>
                   </span>
-                  Нравится: <span class="photos__like-count">356</span>
+                  <span class="photos__like-text">
+                    Нравится: <span class="photos__like-count">356</span>
+                  </span>
                 </div>
               </div>
             </li>
@@ -131,7 +135,9 @@
                       </g>
                     </svg>
                   </span>
-                  Нравится: <span class="photos__like-count">666</span>
+                  <span class="photos__like-text">
+                    Нравится: <span class="photos__like-count">666</span>
+                  </span>
                 </div>
               </div>
             </li>
@@ -154,7 +160,9 @@
                       </g>
                     </svg>
                   </span>
-                  Нравится: <span class="photos__like-count">215</span>
+                  <span class="photos__like-text">
+                    Нравится: <span class="photos__like-count">215</span>
+                  </span>
                 </div>
               </div>
             </li>
@@ -177,7 +185,9 @@
                       </g>
                     </svg>
                   </span>
-                  Нравится: <span class="photos__like-count">4</span>
+                  <span class="photos__like-text">
+                    Нравится: <span class="photos__like-count">4</span>
+                  </span>
                 </div>
               </div>
             </li>
@@ -200,7 +210,9 @@
                       </g>
                     </svg>
                   </span>
-                  Нравится: <span class="photos__like-count">150</span>
+                  <span class="photos__like-text">
+                    Нравится: <span class="photos__like-count">150</span>
+                  </span>
                 </div>
               </div>
             </li>
@@ -223,7 +235,9 @@
                       </g>
                     </svg>
                   </span>
-                  Нравится: <span class="photos__like-count">2560</span>
+                  <span class="photos__like-text">
+                    Нравится: <span class="photos__like-count">2560</span>
+                  </span>
                 </div>
               </div>
             </li>
@@ -232,7 +246,7 @@
       </section>
       <div class="additional">
         <div class="additional__inner">
-          <p class="additional__text">
+          <p class="additional__text  additional__text--br  additional__text--second">
             Затмите их всех!
             <br>Выкладывайте все, что накопилось в телефоне!
           </p>
@@ -241,8 +255,8 @@
       <section class="form-photo">
         <div class="form-photo__inner">
           <form action="http://example.org/" method="post" name="form-photo">
-            <div class="form__section  form__section--gray">
-              <div class="form__container  form__container--left">
+            <div class="form-photo__section  form__section--full">
+              <div class="form__container  form__container--left  form-photo__photo-container">
                 <div class="form__item">
                   <label for="newPhoto" class="form-photo__load-file">
                     <input class="form__input" type="file" name="new_photo" id="newPhoto">
@@ -250,19 +264,25 @@
                   </label>
                 </div>
               </div>
-              <div class="form__container  form__container--right">
+              <div class="form__container  form__container--right  form-photo__correct-container">
                 <div class="form__item">
-                  <ul class="input-list  input-list--line">
-                    <li class="input-list__item  input-list__item--line">
-                      <input class="form-photo__input--radio" type="radio" name="correct" value="crop" id="crop" checked>
+                  <ul class="input-list  input-list--line  input-list--correct">
+                    <li class="input-list__item  input-list__item--line  input-list__item--underline">
+                      <input class="form-photo__input  form-photo__input--radio" type="radio" name="correct" value="crop" id="crop" checked>
                       <label class="form-photo__label" for="crop">
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                           <path fill="none" d="M0,0h48v48H0V0z"/>
                           <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
                         </svg>
                       </label>
+                      <input class="form-photo__input  form-photo__input--range" type="range" name="correct_crop" min="0" max="100" step="1" value="50">
+                      <div class="scale-slider  scale-slider--crop">
+                        <div class="scale-slider__line">
+                          <span class="scale-slider__point"></span>
+                        </div>
+                      </div>
                     </li>
-                    <li class="input-list__item  input-list__item--line">
+                    <li class="input-list__item  input-list__item--line  input-list__item--underline">
                       <input class="form-photo__input--radio" type="radio" name="correct" value="fill" id="brightness">
                       <label class="form-photo__label" for="brightness">
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
@@ -271,8 +291,14 @@
                           <rect y="40" width="48" height="3"/>
                         </svg>
                       </label>
+                      <input class="form-photo__input  form-photo__input--range" type="range" name="correct_brightness" min="0" max="100" step="1" value="50">
+                      <div class="scale-slider  scale-slider--brightness">
+                        <div class="scale-slider__line">
+                          <span class="scale-slider__point"></span>
+                        </div>
+                      </div>
                     </li>
-                    <li class="input-list__item  input-list__item--line">
+                    <li class="input-list__item  input-list__item--line  input-list__item--underline">
                       <input class="form-photo__input--radio" type="radio" name="correct" value="contrast" id="contrast">
                       <label class="form-photo__label" for="contrast">
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
@@ -280,18 +306,16 @@
                           <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
                         </svg>
                       </label>
+                      <input class="form-photo__input  form-photo__input--range" type="range" name="correct_contrast" min="0" max="100" step="1" value="3">
+                      <div class="scale-slider  scale-slider--contrast">
+                        <div class="scale-slider__line">
+                          <span class="scale-slider__point"></span>
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
-                <div class="form__item">
-                  <div class="scale-slider">
-                    <div class="scale-slider__line">
-                      <span class="scale-slider__point"></span>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="form__submit">
+                <div class="form__submit  form__submit--photo">
                   <button class="btn btn--post" type="submit">Запостить</button>
                   <button class="btn btn--reset" type="reset">Отмена</button>
                 </div>

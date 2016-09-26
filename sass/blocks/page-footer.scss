@@ -2,59 +2,77 @@
   padding-top: 40px;
   text-align: center;
 
-  &--mobile-none {
-    @include respond(mobile) {
-      display: none;
-    }
+  @include respond(desktop) {
+    padding-top: 70px;
+  }
+}
+
+.page-footer--mobile-none {
+  @include respond(mobile) {
+    display: none;
+  }
+}
+
+.page-footer__inner {
+  @include container;
+}
+
+.page-footer__logo {
+  margin-bottom: 35px;
+
+  @include respond(mobile) {
+    margin-top: 20px;
   }
 
-  &__inner {
-    @include container;
-    padding-top: 25px;
-  }
-
-  &__logo {
+  @include respond(tablet) {
+    float: left;
+    width: 25%;
     margin-bottom: 19px;
-
-    @include respond(tablet) {
-      float: left;
-      width: 25%;
-    }
   }
 
-  &__social {
-    margin-bottom: 20px;
-
-    @include respond(tablet) {
+  @include respond(desktop) {
+    svg {
       float: left;
-      width: 50%;
     }
   }
+}
 
-  &__copyright {
-    padding-top: 20px;
+.page-footer__social {
+  margin-bottom: 18px;
 
-    @include respond(tablet) {
-      float: right;
-      width: 25%;
-      padding-top: 10px;
-      text-align: right;
+  @include respond(tablet) {
+    float: left;
+    width: 50%;
+  }
+}
+
+.page-footer__copyright {
+  padding-top: 20px;
+
+  @include respond(tablet) {
+    float: right;
+    width: 25%;
+    padding-top: 10px;
+    text-align: right;
+  }
+}
+
+.page-footer__copyright-link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 34px;
+  margin-left: 11px;
+
+  svg {
+    fill: $main-brand-color;
+
+    &:hover {
+      fill: $brand-color;
     }
 
-    &-link {
-      display: inline-block;
-      vertical-align: middle;
-      width: 27px;
-      height: 34px;
-      margin-left: 11px;
-
-      svg {
-        fill: $main-brand-color;
-
-        &:hover {
-          fill: $brand-color;
-        }
-      }
+    &:active {
+      fill: rgba($brand-color, 0.3);
     }
   }
 }

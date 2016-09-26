@@ -16,17 +16,27 @@
 
   &--submit {
     margin-bottom: 40px;
-    padding: 15px;
+    padding: 19px 15px;
     text-transform: uppercase;
     color: $light-color;
     background-color: $green-color;
     border-color: $green-color;
     border-radius: 4px;
-    
-    &.btn--big-form {
-      @include respond(tablet) {
-        float: left;
-      }
+
+    &:hover {
+      background-color: $dark-green-color;
+      border-color: $dark-green-color;
+    }
+
+    &:active {
+      background-color: $dark-green-color;
+      border-color: $dark-green-color;
+      color: rgba($light-color, 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+      border-color: #e5e5e5;
     }
   }
 
@@ -42,9 +52,22 @@
       margin-bottom: 25px;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       min-width: 178px;
-      margin-right: 22px;
+      margin-right: 46px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $light-color;
+      background-color: $main-brand-color;
+    }
+
+    &:active {
+      color: rgba($light-color, 0.3);
+      background-color: $main-brand-color;
     }
   }
 
@@ -57,23 +80,47 @@
     opacity: 0.1;
 
     &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: $light-color;
+      background-color: $brand-color;
       opacity: 1;
     }
 
     @include respond(tablet) {
       min-width: 255px;
-      margin-bottom: 25px;
+      margin-bottom: 0;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       min-width: 178px;
-      margin-right: 22px;
+      margin-right: 0;
     }
   }
 
   &--applications-load {
     margin-top: 27px;
     margin-bottom: 28px;
-    padding: 14px 20px;
+    padding: 12px 20px;
+
+    @include respond(tablet) {
+      min-width: 300px;
+      margin-bottom: 45px;
+    }
+
+    @include respond(desktop) {
+      font-size: 21px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 65px;
+    }
+  }
+
+  &.btn--in-progress {
+    animation-name: color_change;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
   }
 }

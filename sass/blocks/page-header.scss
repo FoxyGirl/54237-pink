@@ -2,19 +2,21 @@
   position: relative;
   text-align: center;
   color: $light-color;
-  background: $body-bg-dark url("../../img/bg-back-mobile@1x.jpg") top center no-repeat;
-  -webkit-background-size:  cover;
-  background-size: cover;
+  background: $body-bg-dark url("../img/bg-back-mobile@1x.jpg") top center no-repeat;
+  -webkit-background-size:  auto 472px;
+  background-size: auto 472px;
   @include clearfix;
 
   @include respond(tablet) {
-    background-color: red;
+    /*
     background-size: 100% auto;
     background-position: center center;
-  }
-
-  @include respond(desktop-all) {
-    background-color: yellow;
+    -webkit-background-size: cover;
+    background-size: cover;
+    */
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
   }
 
   &--bg-position {
@@ -24,63 +26,83 @@
       background-position: center 360px;
     }
 
-    @include respond(desktop-all) {
+    @include respond(desktop) {
       background-position: center center;
-    }
-  }
-
-  &__up {
-    @include clearfix;
-    background-color: rgba($dark-color, 0.3);
-  }
-
-  &__inner-up {
-    @include respond(desktop-all) {
-      margin: 0 auto;
-      max-width: 950px;
-    }
-  }
-
-  &__inner {
-    @include container;
-  }
-
-
-  &__logo {
-    float: left;
-    margin: $indent-help;
-
-    &-link {
-      display: block;
-    }
-
-    &:hover {
-      svg {
-        path {
-          fill: $main-brand-color;
-        }
-      }
-    }
-
-    @include respond(tablet) {
-      margin: 2*$indent-help;
-    }
-
-  }
-
-  &__title {
-    min-height: 110px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 30px 40px;
-    font-family: $font-family-light;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 1.25;
-
-    @include respond(tablet) {
-      font-size: 50px;
     }
   }
 }
 
+.page-header__up {
+  @include clearfix;
+  background-color: rgba($dark-color, 0.3);
+}
+
+.page-header__up-inner {
+  @include clearfix;
+
+  @include respond(desktop) {
+    margin: 0 auto;
+    max-width: 940px;
+  }
+}
+
+.page-header__inner {
+  @include container;
+}
+
+.page-header__logo {
+  float: left;
+  margin: $indent-help;
+
+    &:hover {
+    svg {
+      path {
+        fill: $main-brand-color;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 0.3;
+        path {
+          fill: $light-color;
+        }
+      }
+    }
+  }
+
+  @include respond(tablet) {
+    margin: 2*$indent-help;
+  }
+
+  @include respond(desktop) {
+    margin-left: 0;
+  }
+}
+
+.page-header__logo-link {
+  display: block;
+}
+
+.page-header__title {
+  min-height: 110px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 30px 20px;
+  font-family: $font-family-light;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.25;
+
+  @include respond(tablet) {
+    min-height: 190px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 50px;
+  }
+
+  @include respond(desktop) {
+    min-height: 155px;
+    padding-top: 60px;
+  }
+}

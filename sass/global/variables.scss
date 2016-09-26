@@ -1,5 +1,5 @@
 $font-family-base: "OpenSans", Arial, Calibri, sans-serif;
-$font-family-light: "OpenSans Light", Arial, Calibri, sans-serif;
+$font-family-light: "OpenSans Light", "Arial Narrow", Calibri, sans-serif;
 $font-size-base: 14px;
 $font-size-tablet: 18px;
 $line-height: 1.8;
@@ -12,21 +12,19 @@ $brand-color: #283645;
 $main-brand-color: $pink-color;
 $dark-color: #000;
 $gray-color: #e9ebec;
+$dark-gray-color: #b5b9be;
 $light-gray-color: #f2f2f2;
 $dark-gray-color: #b5b9be;
 $green-color: #2aab6d;
+$dark-green-color: #1c9b5e;
 $red-color: #f25b26;
 
 $indent-help: 20px;
 
 
-$tablet-widths: "(min-width: 660px)";
-$desktop-widths: "(min-width: 960px)";
-
 $bp-xsmall: 320px; // Tiny-screen and old devices;
 $bp-small: 660px; // Mobiles and portrait-view tablets
+$bp-small-middle-width: 700px; // Normal mobile devices and small tablets;
 $bp-medium: 960px; // Desktop starts here
-$bp-large: 1200px; // Normal size desktop view
-$bp-xlarge: 1144px;
-
-
+$bp-large: 1040px; // Desktop seamless transition
+$bp-xlarge: 1200px;  // Normal size desktop view

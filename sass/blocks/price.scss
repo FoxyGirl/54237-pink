@@ -1,127 +1,223 @@
 .price {
   position: relative;
-  padding-top: 60px;
+  padding-top: 90px;
   padding-bottom: 30px;
   background-color: $light-gray-color;
 
-  @include respond(desktop-all) {
+  @include respond(tablet-only) {
+    padding-top: 90px;
+  }
+
+  @include respond(desktop) {
     padding-top: 150px;
-  }
-
-  &__inner {
-    @include container;
-  }
-
-  &__content {
-    height: 400px;
-  }
-
-  &__table {
-
-    @include respond(mobile) {
-      th:first-child,
-      td:first-child {
-        display: none;
-      }
-    }
-  }
-
-
-
-  &__name {
-    position: relative;
-    padding: 20px;
-    @include border-table;
-    background-color: $brand-color;
-    color: $light-color;
-
-    &-title {
-      font-size: 18px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    &--hit {
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: block;
-        width: 73px;
-        height: 73px;
-        background: transparent url("../../img/bg-hit.svg") 0 0 no-repeat;
-      }
-    }
-  }
-
-  &__count {
-    font-family: $font-family-light;
-    font-size: 24px;
-    font-weight: normal;
-  }
-
-  &__currency {
-    font-size: 24px;
-    text-transform: uppercase;
-  }
-
-  &__option {
-    position: relative;
-    padding: 20px;
-    @include border-table;
-    text-transform: uppercase;
-
-    @include respond(tablet) {
-      text-align: center;
-    }
-
-    &--mobile-hidden {
-      text-align: left;
-      text-transform: none;
-    }
-
-    &-name {
-      @include respond(tablet) {
-        display: none;
-      }
-    }
-  }
-
-  &__marker {
-    float: right;
-
-    @include respond(tablet) {
-      float: none;
-    }
-
-    &--yes {
-      fill: $green-color;
-
-      @include respond(tablet) {
-        svg {
-          width: 34px;
-          height: auto;
-        }
-      }
-    }
-
-    &--no {
-      fill: $red-color;
-
-      @include respond(tablet) {
-        svg {
-          width: 30px;
-          height: auto;
-        }
-      }
-    }
   }
 
   .slider__toggles {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0px;
+    bottom: 0;
+  }
+}
+
+.price__inner {
+  @include container;
+
+  @include respond(mobile) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.price__content {
+  height: 360px;
+
+  @include respond(tablet-only) {
+    height: 260px;
+  }
+
+  @include respond(desktop) {
+    height: 350px;
+  }
+
+  .slider__toggles {
+    display: none;
+
+    @include respond(mobile) {
+      display: block;
+    }
+  }
+}
+
+.price__table {
+
+  @include respond(mobile) {
+    position: absolute;
+    left: -260px;
+    width: 840px;
+
+    th:first-child,
+    td:first-child {
+      display: none;
+    }
+  }
+
+  td {
+    background-color: $light-color;
+  }
+}
+
+.price__name {
+  position: relative;
+  padding: 16px 37px;
+  @include border-table;
+  background-color: $brand-color;
+  color: $light-color;
+
+  @include respond(mobile) {
+    padding: 20px 37px;
+  }
+
+  @include respond(desktop) {
+    padding: 20px 42px;
+  }
+
+  &--hit {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      display: block;
+      width: 73px;
+      height: 73px;
+      background: transparent url("../img/bg-hit.svg") 0 0 no-repeat;
+
+      @include respond(tablet-only) {
+        width: 63px;
+        height: 63px;
+        -webkit-background-size: cover;
+        background-size: cover;
+      }
+    }
+
+    &::after {
+      content: "Хит";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      z-index: 6;
+      font-family: $font-family-base;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $light-color;
+      transform: rotate(-45deg);
+
+      @include respond(desktop) {
+        left: 10px;
+        top: 17px;
+      }
+    }
+  }
+}
+
+.price__name-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include respond(tablet-only) {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+.price__count {
+  font-family: $font-family-light;
+  font-size: 24px;
+  font-weight: normal;
+
+  @include respond(tablet-only) {
+    font-size: 18px;
+  }
+}
+
+.price__currency {
+  font-size: 24px;
+  text-transform: uppercase;
+
+  @include respond(tablet-only) {
+    font-size: 18px;
+  }
+}
+
+.price__option {
+  position: relative;
+  padding: 17px 20px 14px;
+  @include border-table;
+  text-transform: uppercase;
+
+  @include respond(tablet) {
+    padding: 7px 20px;
+    text-align: center;
+  }
+
+  @include respond(desktop) {
+    padding: 14px 20px;
+  }
+
+  &--mobile-hidden {
+    padding-left: 15px;
+    padding-right: 25px;
+    text-align: left;
+    text-transform: none;
+  }
+}
+
+.price__option-name {
+  @include respond(tablet) {
+    display: none;
+  }
+}
+
+.price__marker {
+  float: right;
+
+  @include respond(tablet) {
+    float: none;
+  }
+
+  &--yes {
+    fill: $green-color;
+
+    svg {
+      width: 30px;
+      height: auto;
+    }
+
+    @include respond(tablet) {
+      svg {
+        width: 32px;
+        height: auto;
+      }
+    }
+  }
+
+  &--no {
+    fill: $red-color;
+
+    svg {
+      width: 25px;
+      height: auto;
+    }
+
+    @include respond(tablet) {
+      svg {
+        width: 28px;
+        height: auto;
+      }
+    }
   }
 }
