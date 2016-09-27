@@ -4,6 +4,7 @@
   margin-right: -$indent-help;
   min-height: 400px;
 
+  /*
   img {
     position: absolute;
     left: 0;
@@ -19,7 +20,7 @@
       height: 647px;
     }
   }
-
+*/
   @include respond(tablet) {
     position: absolute;
     width: 470px;
@@ -35,5 +36,26 @@
     right: 40px;
     bottom: 0;
     background-size: auto 100%;
+  }
+}
+
+.promo-hand__img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  @include respond(tablet-only) {
+    width: 478px;
+    height: 548px;
+  }
+
+  @include respond(desktop) {
+    width: 565px;
+    height: 647px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }

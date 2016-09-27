@@ -10,12 +10,8 @@
 
 .investigation__inner {
   @include container;
-}
-
-.investigation__content {
   padding-top: 60px;
   padding-bottom: 50px;
-  @include clearfix;
 
   @include respond(desktop) {
     padding-top: 10px;
@@ -23,18 +19,46 @@
   }
 }
 
-.investigation__decor {
+.investigation__timer {
   float: left;
+  position: relative;
   width: 240px;
   height: 275px;
   margin-right: 70px;
-  background: cyan url("../img/timer.svg") 0 center no-repeat;
+  background: transparent url("../img/icon-timer.svg") 0 center no-repeat;
+  -webkit-background-size: auto 276px;
+  background-size: auto 276px;
 
   @include respond(desktop) {
     width: 300px;
     height: 345px;
     margin-right: 67px;
-    background-color: yellow;
+  }
+}
+
+.investigation__time {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  @include zero-centered;
+  top: 40px;
+  text-align: center;
+  font-size: 96px;
+  font-weight: bold;
+  line-height: 175px;
+  color: $main-brand-color;
+  border-radius: 50%;
+  border: 15px solid $main-brand-color;
+  background-color: $light-color;
+
+  @include respond(desktop) {
+    width: 220px;
+    height: 220px;
+    top: 47px;
+    font-size: 120px;
+    line-height: 220px;
+    border: 17px solid $main-brand-color;
+    background-color: $light-gray-color;
   }
 }
 
@@ -73,4 +97,12 @@
 
 .investigation__link {
   color: $main-brand-color;
+
+  &:hover {
+    color: $brand-color;
+  }
+
+  &:active {
+    color: rgba($brand-color, 0.3);
+  }
 }

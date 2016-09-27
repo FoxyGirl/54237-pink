@@ -37,11 +37,10 @@
       position: absolute;
       left: 50%;
       top: 70px;
-      display: block;
       width: 85px;
       height: 70px;
       margin-left: -35px;
-      background: yellow url("../img/quotes.svg") center center no-repeat;
+      background: transparent url("../img/icon-quotes.svg") center center no-repeat;
     }
   }
 }
@@ -57,6 +56,7 @@
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: bold;
+  color: $dark-color;
 
   @include respond(tablet) {
     font-size: 20px;

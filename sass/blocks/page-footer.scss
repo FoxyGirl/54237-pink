@@ -19,6 +19,12 @@
 
 .page-footer__logo {
   margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 147px;
+  height: 40px;
+  font-size: 0;
+  background: transparent url("../img/logo-pink-blue-mobile.svg") 0 0 no-repeat;
 
   @include respond(mobile) {
     margin-top: 20px;
@@ -31,9 +37,7 @@
   }
 
   @include respond(desktop) {
-    svg {
-      float: left;
-    }
+    background-image: url("../img/logo-pink-blue-desktop.svg");
   }
 }
 
