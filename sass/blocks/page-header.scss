@@ -35,11 +35,11 @@
     background-position: center 255px;
 
     @include respond(tablet) {
-      background-position: center 360px;
+      background-position: center 250px;
     }
 
     @include respond(desktop) {
-      background-position: center center;
+      background-position: top center;
     }
   }
 }
@@ -84,7 +84,7 @@
   }
 
   @include respond(tablet) {
-    margin: 2*$indent-help;
+    margin: 41px 2*$indent-help;
   }
 
   @include respond(desktop) {

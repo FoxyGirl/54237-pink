@@ -15,7 +15,7 @@
 }
 
 .photos__item {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   background-color: $light-gray-color;
 
   @include respond(tablet) {
@@ -140,7 +140,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-content: space-between;
-    padding: 30px;
+    padding: 28px;
   }
 }
 

@@ -1,5 +1,5 @@
 .page-footer {
-  padding-top: 40px;
+  padding-top: 35px;
   text-align: center;
 
   @include respond(desktop) {
@@ -26,6 +26,15 @@
   font-size: 0;
   background: transparent url("../img/logo-pink-blue-mobile.svg") 0 0 no-repeat;
 
+  &:hover {
+    background-image: url("../img/logo-pink-blue-pink-mobile.svg");
+  }
+
+  &:active {
+    background-image: url("../img/logo-pink-blue-mobile.svg");
+    opacity: 0.3;
+  }
+
   @include respond(mobile) {
     margin-top: 20px;
   }
@@ -38,11 +47,20 @@
 
   @include respond(desktop) {
     background-image: url("../img/logo-pink-blue-desktop.svg");
+
+    &:hover {
+      background-image: url("../img/logo-pink-blue-pink-desktop.svg");
+    }
+
+    &:active {
+      background-image: url("../img/logo-pink-blue-desktop.svg");
+      opacity: 0.3;
+    }
   }
 }
 
 .page-footer__social {
-  margin-bottom: 18px;
+  margin-bottom: 35px;
 
   @include respond(tablet) {
     float: left;
