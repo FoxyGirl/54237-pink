@@ -79,6 +79,10 @@
 .photos__image {
   font-size: 0;
 
+  a {
+    display: block;
+  }
+
   img {
     width: 100%;
     height: auto;

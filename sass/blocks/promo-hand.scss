@@ -2,40 +2,22 @@
   position: relative;
   margin-left: -$indent-help;
   margin-right: -$indent-help;
-  min-height: 400px;
+  min-height: 395px;
 
-  /*
-  img {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    @include respond(tablet-only) {
-      width: 478px;
-      height: 548px;
-    }
-
-    @include respond(desktop) {
-      width: 565px;
-      height: 647px;
-    }
-  }
-*/
   @include respond(tablet) {
     position: absolute;
-    width: 470px;
-    height: 550px;
-    right: 40px;
+    width: 100%;
+    height: 545px;
+    right: 0;
+    left: 0;
     bottom: 0;
-    background-size: auto 100%;
   }
 
   @include respond(desktop) {
-    width: 555px;
+    //width: 555px;
     height: 645px;
-    right: 40px;
+    //right: 40px;
     bottom: 0;
-    background-size: auto 100%;
   }
 }
 
@@ -43,19 +25,28 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 258px;
+  height: 286px;
 
   @include respond(tablet-only) {
-    width: 478px;
-    height: 548px;
+    width: 700px;
+    height: 545px;
+    left: 3%;
   }
 
   @include respond(desktop) {
-    width: 565px;
-    height: 647px;
+    width: 1050px;
+    height: 645px;
+    left: 4%;
   }
 
   img {
     height: 100%;
     width: auto;
+  }
+
+  picture {
+    font-size: 0;
+    line-height: 0;
   }
 }

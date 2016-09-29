@@ -64,24 +64,7 @@
 
 .page-header__logo {
   float: left;
-  margin: $indent-help;
-
-    &:hover {
-    svg {
-      path {
-        fill: $main-brand-color;
-      }
-    }
-
-    &:active {
-      svg {
-        opacity: 0.3;
-        path {
-          fill: $light-color;
-        }
-      }
-    }
-  }
+  margin: 22px $indent-help;
 
   @include respond(tablet) {
     margin: 41px 2*$indent-help;
@@ -89,6 +72,7 @@
 
   @include respond(desktop) {
     margin-left: 0;
+    margin-top: 26px;
   }
 }
 

@@ -10,12 +10,14 @@
 
   @include respond(tablet) {
     float: left;
-    width: 48%;
+    width: 48.5%;
+    min-height: 620px;
     background-color: transparent;
   }
 
   @include respond(desktop) {
     width: 32%;
+    min-height: 740px;
   }
 }
 
@@ -95,14 +97,15 @@
   line-height: $line-height;
 
   @include respond(tablet) {
-    margin-bottom: 75px;
+    margin-bottom: 48px;
     padding-left: 0;
     padding-right: 0;
     font-size: 18px;
     line-height: 1.5;
+    letter-spacing: -0.01em;
   }
 
   @include respond(desktop) {
-    margin-bottom: 90px;
+    margin-bottom: 60px;
   }
 }
