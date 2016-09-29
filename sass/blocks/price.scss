@@ -90,15 +90,14 @@
       top: 0;
       z-index: 5;
       display: block;
-      width: 73px;
+      width: 74px;
       height: 73px;
       background: transparent url("../img/bg-hit.svg") 0 0 no-repeat;
 
       @include respond(tablet-only) {
-        width: 63px;
-        height: 63px;
-        -webkit-background-size: cover;
-        background-size: cover;
+        width: 61px;
+        height: 61px;
+        background-image: url("../img/bg-hi-tablet.svg");
       }
     }
 
@@ -191,33 +190,9 @@
 
   &--yes {
     fill: $green-color;
-
-    svg {
-      width: 30px;
-      height: auto;
-    }
-
-    @include respond(tablet) {
-      svg {
-        width: 32px;
-        height: auto;
-      }
-    }
   }
 
   &--no {
     fill: $red-color;
-
-    svg {
-      width: 25px;
-      height: auto;
-    }
-
-    @include respond(tablet) {
-      svg {
-        width: 28px;
-        height: auto;
-      }
-    }
   }
 }

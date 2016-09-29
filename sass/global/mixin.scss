@@ -48,6 +48,12 @@
     @media only screen and (max-width: $bp-small - 1) { @content; }
   }
 
+  // for generic mobile viewports (width  to 659px) and retina
+  @if $media == mobile-retina {
+    @media only screen and (max-width: $bp-small - 1) and (min-resolution: 144dpi),
+    (max-width: $bp-small - 1) and (min-resolution: 1.5dppx) { @content; }
+  }
+
   // for generic tablet viewports (width from 660px and bigger)
   @else if $media == tablet {
     @media only screen and (min-width: $bp-small) { @content; }
@@ -63,6 +69,12 @@
     @media only screen and (min-width: $bp-small) and (max-width: $bp-medium - 1) { @content; }
   }
 
+  // for generic tablet viewports (width from 660px to 959px)
+  @else if $media == tablet-only-retina {
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium - 1) and (min-resolution: 144dpi),
+    (min-width: $bp-small) and (max-width: $bp-medium - 1) and (min-resolution: 1.5dppx) { @content; }
+  }
+
   // width for small-desktop viewports (from 960px to 1144px, intermediate values)
   @else if $media == desktop-small {
     @media only screen and (min-width: $bp-medium + 1) and (max-width: $bp-large) { @content; }
@@ -71,6 +83,12 @@
   // for ALL desktop viewports (from 960px and bigger)
   @else if $media == desktop {
     @media only screen and (min-width: $bp-medium) { @content; }
+  }
+
+  // for ALL desktop viewports (from 960px and bigger)
+  @else if $media == desktop-retina {
+    @media only screen and (min-width: $bp-medium) and (min-resolution: 144dpi),
+    (min-width: $bp-medium) and (min-resolution: 1.5dppx) { @content; }
   }
 
   // for desktop viewports (from 1040px and bigger)

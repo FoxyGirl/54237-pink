@@ -15,7 +15,7 @@
 }
 
 .photos__item {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   background-color: $light-gray-color;
 
   @include respond(tablet) {
@@ -79,6 +79,10 @@
 .photos__image {
   font-size: 0;
 
+  a {
+    display: block;
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -140,7 +144,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-content: space-between;
-    padding: 30px;
+    padding: 28px;
   }
 }
 

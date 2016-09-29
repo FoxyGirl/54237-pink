@@ -48,7 +48,6 @@
   top: 0;
   width: 22px;
   height: 42px;
-  background-color: magenta;
   cursor: pointer;
 
   &--prev {
@@ -57,5 +56,21 @@
 
   &--next {
     right: 0;
+  }
+
+  svg {
+    fill: rgba($brand-color, 0.3);
+  }
+
+  &:hover {
+     svg {
+       fill: rgba($brand-color, 0.6);
+     }
+   }
+
+  &:active {
+    svg {
+      fill: rgba($brand-color, 0.1);
+    }
   }
 }

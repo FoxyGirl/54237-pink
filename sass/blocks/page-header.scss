@@ -7,27 +7,39 @@
   background-size: auto 472px;
   @include clearfix;
 
+  @include respond(mobile-retina) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
   @include respond(tablet) {
-    /*
-    background-size: 100% auto;
-    background-position: center center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    */
-    background-position: center center;
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size:  auto 729px;
+    background-size: auto 729px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  @include respond(tablet-only-retina) {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
+  }
+
+  @include respond(desktop) {
+    -webkit-background-size:  auto 853px;
+    background-size: auto 853px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  @include respond(desktop-retina) {
+    background-image: url("../img/bg-back-desktop@2x.jpg");
   }
 
   &--bg-position {
     background-position: center 255px;
 
     @include respond(tablet) {
-      background-position: center 360px;
+      background-position: center 250px;
     }
 
     @include respond(desktop) {
-      background-position: center center;
+      background-position: top center;
     }
   }
 }
@@ -52,31 +64,15 @@
 
 .page-header__logo {
   float: left;
-  margin: $indent-help;
-
-    &:hover {
-    svg {
-      path {
-        fill: $main-brand-color;
-      }
-    }
-
-    &:active {
-      svg {
-        opacity: 0.3;
-        path {
-          fill: $light-color;
-        }
-      }
-    }
-  }
+  margin: 22px $indent-help;
 
   @include respond(tablet) {
-    margin: 2*$indent-help;
+    margin: 41px 2*$indent-help;
   }
 
   @include respond(desktop) {
     margin-left: 0;
+    margin-top: 26px;
   }
 }
 

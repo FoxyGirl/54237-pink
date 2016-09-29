@@ -9,6 +9,12 @@
       background-color: transparent;
     }
   }
+
+  &--no-js {
+    .main-nav__toggler {
+      display: none;
+    }
+  }
 }
 
 .main-nav__toggler {
@@ -17,20 +23,56 @@
   padding: 0;
   width: 50px;
   height: 25px;
-  background: transparent url('../img/icon-menu-burger.svg') right center no-repeat;
+  background-color: transparent;
   border: none;
   outline: none;
 
   @include respond(tablet) {
-    margin: 2*$indent-help;
+    margin: 41px 2*$indent-help;
   }
 
   @include respond(desktop) {
     display: none;
   }
 
+  svg:last-child {
+    display: none;
+  }
+
   &--close {
-    background-image: url('../img/icon-menu-cross.svg');
+    svg:first-child {
+      display: none;
+    }
+
+    svg:last-child {
+      display: inline;
+    }
+  }
+
+  svg {
+    float: right;
+
+    path {
+      fill: $light-color;
+    }
+  }
+
+  &:hover {
+    svg {
+      path {
+        fill: $main-brand-color;
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+
+      path {
+        fill: $main-brand-color;
+      }
+    }
   }
 }
 
