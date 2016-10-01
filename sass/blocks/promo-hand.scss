@@ -3,6 +3,7 @@
   margin-left: -$indent-help;
   margin-right: -$indent-help;
   min-height: 395px;
+  overflow: hidden;
 
   @include respond(tablet) {
     position: absolute;
@@ -14,9 +15,7 @@
   }
 
   @include respond(desktop) {
-    //width: 555px;
     height: 645px;
-    //right: 40px;
     bottom: 0;
   }
 }

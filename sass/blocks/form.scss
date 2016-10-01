@@ -110,6 +110,15 @@
   &--application {
     margin-bottom: 35px;
 
+    @include respond(mobile) {
+      padding-top: 30px;
+      padding-bottom: 10px;
+
+      .form__legend {
+        margin-bottom: 20px;
+      }
+    }
+
     @include respond(tablet) {
       order: 2;
       margin-bottom: 65px;
@@ -144,6 +153,8 @@
     }
 
     @include respond(mobile) {
+      padding-top: 20px;
+
       .form__legend {
         display: none;
       }
@@ -184,12 +195,12 @@
   }
 
   &--achievements {
-    padding-bottom: $indent-help;
+    padding-bottom: 10px;
     margin-bottom: 0;
 
     @include respond(tablet) {
       order: 4;
-      margin-bottom: 75px;
+      margin-bottom: 65px;
 
       .form__legend {
         min-width: 375px;
@@ -210,11 +221,15 @@
     margin-bottom: 40px;
 
     .form__legend {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     textarea {
       min-height: 200px;
+    }
+
+    @include respond(mobile) {
+      padding-top: 10px;
     }
 
     @include respond(tablet) {
@@ -238,9 +253,22 @@
 .form__item {
   display: block;
 
-  &:last-child {
-    .form__label--checkbox {
-      margin-bottom: 25px;
+  @include respond(desktop) {
+    &:last-child {
+      .form__label--checkbox {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+.form__item-group {
+
+  @include respond(desktop) {
+    padding-right: 43px;
+
+    &:last-child {
+      padding-right: 0;
     }
   }
 }
@@ -277,10 +305,14 @@
 
   &--checkbox {
     position: relative;
-    margin: 0 0 45px;
-    padding-left: 68px;
+    margin: 0 0 38px;
+    padding-left: 58px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    @include respond(mobile) {
+      padding-left: 68px;
+    }
 
     input[type="checkbox"] {
       position: absolute;
@@ -426,7 +458,7 @@
 }
 
 .form__legend {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 10px $indent-help;
   font-size: $font-size-base;
   font-weight: normal;
@@ -438,6 +470,7 @@
     position: absolute;
     top: -22px;
     left: 50%;
+    margin-bottom: 30px;
     transform: translateX(-50%);
     background-color: $light-color;
   }
@@ -451,6 +484,10 @@
     padding-right: $indent-help;
     padding-left: $indent-help;
     margin: auto;
+
+    @include respond(mobile) {
+      margin-bottom: 20px;
+    }
 
     @include respond(tablet) {
       order: 7;
@@ -467,6 +504,10 @@
         padding: 17px 55px;
       }
     }
+
+    @include respond(desktop) {
+      margin-bottom: 0;
+    }
   }
 
   &--photo {
@@ -475,7 +516,9 @@
     }
 
     @include respond(desktop) {
-      margin-right: 55px;
+      margin-right: 60px;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

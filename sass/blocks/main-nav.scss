@@ -27,8 +27,8 @@
   border: none;
   outline: none;
 
-  @include respond(tablet) {
-    margin: 41px 2*$indent-help;
+  @include respond(tablet-only) {
+    margin: 42px 2*$indent-help;
   }
 
   @include respond(desktop) {

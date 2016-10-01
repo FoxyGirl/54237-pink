@@ -66,8 +66,8 @@
   float: left;
   margin: 22px $indent-help;
 
-  @include respond(tablet) {
-    margin: 41px 2*$indent-help;
+  @include respond(tablet-only) {
+    margin: 28px 2*$indent-help;
   }
 
   @include respond(desktop) {
