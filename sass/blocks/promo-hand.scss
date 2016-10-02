@@ -22,7 +22,7 @@
 
 .promo-hand__img {
   position: absolute;
-  left: 0;
+  right: 62px;
   bottom: 0;
   width: 258px;
   height: 286px;
@@ -30,7 +30,7 @@
   @include respond(tablet-only) {
     width: 700px;
     height: 545px;
-    left: 3%;
+    right: -3%;
   }
 
   @include respond(desktop) {

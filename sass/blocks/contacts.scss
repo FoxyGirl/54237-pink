@@ -34,6 +34,15 @@
 
 .contacts__list {
   @include ul-clear;
+  margin-bottom: 30px;
+
+  @include respond(tablet) {
+    margin-bottom: 25px;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__item {

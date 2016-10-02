@@ -69,7 +69,7 @@
 
 .price__name {
   position: relative;
-  padding: 16px 37px;
+  padding: 14px 36px;
   @include border-table;
   background-color: $brand-color;
   color: $light-color;
@@ -97,7 +97,7 @@
       @include respond(tablet-only) {
         width: 61px;
         height: 61px;
-        background-image: url("../img/bg-hi-tablet.svg");
+        background-image: url("../img/bg-hit-tablet.svg");
       }
     }
 
@@ -159,7 +159,7 @@
   text-transform: uppercase;
 
   @include respond(tablet) {
-    padding: 7px 20px;
+    padding: 8px 20px;
     text-align: center;
   }
 

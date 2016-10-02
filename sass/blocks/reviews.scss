@@ -46,9 +46,16 @@
 }
 
 .reviews__item {
+  opacity: 0;
+
   @include respond(tablet) {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  &--active {
+    opacity: 1;
+    transition: opacity 0.95s;
   }
 }
 

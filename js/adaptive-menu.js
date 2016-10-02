@@ -1,4 +1,6 @@
 ;(function() {
+  'use strict';
+
   var navToggler = document.getElementById('navToggler'),
     mainNav = document.querySelector('.main-nav'),
     mainNavList = document.getElementById('mainNav'),
