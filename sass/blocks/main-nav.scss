@@ -2,6 +2,10 @@
   @include clearfix;
   background-color: transparent;
 
+  @include respond(desktop) {
+    float: right;
+  }
+
   &--opened {
     background-color: $brand-color;
 
@@ -11,8 +15,18 @@
   }
 
   &--no-js {
+    background-color: $brand-color;
+
+    @include respond(desktop) {
+      background-color: transparent;
+    }
+
     .main-nav__toggler {
       display: none;
+    }
+
+    .main-nav__list {
+      height: auto;
     }
   }
 }
@@ -120,7 +134,7 @@
     }
 
     @include respond(desktop) {
-      padding: 42px 40px;
+      padding: 42px 20px;
       text-transform: none;
       font-weight: normal;
       background-color: transparent;
@@ -133,18 +147,26 @@
 
   @include respond(desktop) {
     display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
 
     &:last-child {
+      margin-right: 0;
+
       a {
-        margin-right: 0;
+        padding-right: 0;
+
+        &:after {
+          right: 0;
+        }
       }
     }
 
     a {
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: 40px;
-      margin-left: 40px;
       border-top-color: transparent;
       border-bottom-color: transparent;
     }
@@ -158,8 +180,8 @@
         &:after {
           content: "";
           position: absolute;
-          left: 40px;
-          right: 40px;
+          left: 20px;
+          right: 20px;
           bottom: 30px;
           height: 2px;
           background-color: $light-color;

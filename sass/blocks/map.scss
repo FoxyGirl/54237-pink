@@ -5,24 +5,27 @@
 .map__inner {
   &--responsive {
     position: relative;
-    min-height: 200px;
+    height: 200px;
     background: $gray-color url("../img/bg-map-mobile@1x.png") top center no-repeat;
+    background-position: center -446px;
+    -webkit-background-size: cover;
+    background-size: cover;
     overflow: hidden;
 
     @include respond(tablet) {
       height: 380px;
       background-image: url("../img/bg-map-tablet@1x.jpg");
-      background-size: auto 848px;
+     // background-size: auto 848px;
       background-position: center -343px;
     }
 
     @include respond(desktop) {
       height: 500px;
       background-image: url("../img/bg-map-desktop@1x.jpg");
-      background-size: auto 976px;
+     // background-size: auto 976px;
       background-position: center -280px;
     }
-
+/*
     &::after {
       content: "";
       position: absolute;
@@ -37,7 +40,7 @@
         top: 52%;
       }
     }
-
+*/
     iframe {
       position: absolute;
       left: 0;

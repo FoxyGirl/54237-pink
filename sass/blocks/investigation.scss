@@ -78,9 +78,14 @@
   @include respond(desktop) {
     margin-top: 92px;
     margin-bottom: 20px;
+
+    br {
+      display: none;
+    }
   }
 }
 
+/*
 .investigation__break {
   display: block;
 
@@ -88,6 +93,7 @@
     display: inline;
   }
 }
+*/
 
 .investigation__text {
   margin-top: 0;
