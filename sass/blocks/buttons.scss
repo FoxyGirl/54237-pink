@@ -4,7 +4,7 @@
   box-sizing: border-box;
   min-width: 280px;
   margin-bottom: 10px;
-  padding: 10px 45px;
+  padding: 10px 40px;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
@@ -42,19 +42,22 @@
 
   &--post {
     margin-bottom: 10px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 11px;
+    padding-bottom: 13px;
     color: $main-brand-color;
     border-color: $main-brand-color;
 
     @include respond(tablet) {
-      min-width: 255px;
+      min-width: 260px;
       margin-bottom: 25px;
+      margin-left: 15px;
+      margin-right: 5px;
     }
 
     @include respond(desktop) {
-      min-width: 178px;
-      margin-right: 46px;
+      min-width: 183px;
+      margin-right: 15px;
+      margin-left: 0;
       padding-top: 12px;
       padding-bottom: 12px;
       margin-bottom: 0;
@@ -84,18 +87,20 @@
     }
 
     &:active {
-      color: $light-color;
+      color: rgba($light-color, 0.3);
       background-color: $brand-color;
-      opacity: 1;
+      opacity: 0.3;
     }
 
     @include respond(tablet) {
-      min-width: 255px;
+      min-width: 260px;
       margin-bottom: 0;
+      margin-left: 15px;
+      margin-right: 5px;
     }
 
     @include respond(desktop) {
-      min-width: 178px;
+      min-width: 183px;
       margin-right: 0;
     }
   }

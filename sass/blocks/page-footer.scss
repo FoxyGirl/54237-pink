@@ -18,7 +18,7 @@
 }
 
 .page-footer__logo {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
   width: 147px;
@@ -30,35 +30,6 @@
     width: 147px;
     height: 40px;
     font-size: 0;
-    /*
-    background: transparent url("../img/logo-pink-blue-mobile.svg") 0 0 no-repeat;
-
-    &:hover {
-      background-image: url("../img/logo-pink-blue-pink-mobile.svg");
-    }
-
-    &:active {
-      background-image: url("../img/logo-pink-blue-mobile.svg");
-      opacity: 0.3;
-    }
-
-    @include respond(desktop) {
-      background-image: url("../img/logo-pink-blue-desktop.svg");
-
-      &:hover {
-        background-image: url("../img/logo-pink-blue-pink-desktop.svg");
-      }
-
-      &:active {
-        background-image: url("../img/logo-pink-blue-desktop.svg");
-        opacity: 0.3;
-      }
-    }
-    */
-  }
-
-  @include respond(mobile) {
-    margin-top: 20px;
   }
 
   @include respond(tablet) {
@@ -69,7 +40,7 @@
 }
 
 .page-footer__social {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 
   @include respond(tablet) {
     float: left;
@@ -84,8 +55,8 @@
   @include respond(tablet) {
     float: right;
     width: 25%;
-    margin-top: 5px;
     padding-top: 10px;
+    margin-top: 5px;
     text-align: right;
   }
 }

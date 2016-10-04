@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>Пинк</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -117,22 +117,22 @@
                 srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
               <img
                 src="img/iphone-hand-mobile@1x.png" alt=""
-                srcset="img/iphone-hand-mobile@2x.jpg 2x">
+                srcset="img/iphone-hand-mobile@2x.png 2x">
             </picture>
           </div>
         </div>
         <div class="applications">
           <h2 class="applications__title">Взгляните на&nbsp;жизнь иначе!</h2>
-          <a class="btn btn--applications-load" href="">Скачать приложение</a>
+          <a class="btn btn--applications-load" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8" target="_blank" rel="noopener noreferrer">Скачать приложение</a>
           <ul class="applications__list">
             <li class="applications__item">
-              <a href="" class="applications__link  applications__link--mac">Mac</a>
+              <a class="applications__link  applications__link--mac" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8" target="_blank" rel="noopener noreferrer">Mac</a>
             </li>
             <li class="applications__item">
-              <a href="" class="applications__link  applications__link--android">Android</a>
+              <a class="applications__link  applications__link--android" href="https://play.google.com/store?hl=ru" target="_blank" rel="noopener noreferrer">Android</a>
             </li>
             <li class="applications__item">
-              <a href="" class="applications__link  applications__link--windows">Windows</a>
+              <a class="applications__link  applications__link--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" target="_blank" rel="noopener noreferrer">Windows</a>
             </li>
           </ul>
           <p class="applications__text">
@@ -222,7 +222,7 @@
           </div>
           <div class="investigation__content">
             <div class="investigation__title">
-              Эффект <span class="investigation__break">на&nbsp;24&nbsp;часа!</span>
+              Эффект <br>на&nbsp;24&nbsp;часа!
             </div>
             <p class="investigation__text">
               Британские ученые провели исследования и доказали,
@@ -235,9 +235,9 @@
         </div>
       </section>
       <section class="reviews">
-        <div class="reviews__inner">
+        <div class="reviews__inner"  id="reviewsSlider">
           <ul class="reviews__content  slider">
-            <li class="slider__item  reviews__item">
+            <li class="slider__item  reviews__item  reviews__item--active">
               <div class="reviews__author">
                 <div class="reviews__author-name">Николай Петров</div>
                 <div class="reviews__author-additional">
@@ -246,6 +246,28 @@
               </div>
               <p class="reviews__text">
                 <span class="reviews__quote  reviews__quote--hidden">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="reviews__quote  reviews__quote--hidden">»</span>
+              </p>
+            </li>
+            <li class="slider__item  reviews__item">
+              <div class="reviews__author">
+                <div class="reviews__author-name">Петр Николаевский</div>
+                <div class="reviews__author-additional">
+                  45 лет, преподаватель
+                </div>
+              </div>
+              <p class="reviews__text">
+                <span class="reviews__quote  reviews__quote--hidden">«</span>Осень – не время грустить! Преображаются леса и парки, воздух наполняется ароматами прелой листвы, настроение становится по-осеннему философским и утонченным.<span class="reviews__quote  reviews__quote--hidden">»</span>
+              </p>
+            </li>
+            <li class="slider__item  reviews__item">
+              <div class="reviews__author">
+                <div class="reviews__author-name">Марк Угольков</div>
+                <div class="reviews__author-additional">
+                  28 лет, любитель
+                </div>
+              </div>
+              <p class="reviews__text">
+                <span class="reviews__quote  reviews__quote--hidden">«</span>Для меня камера в мобильном телефоне – это иное восприятие окружающего мира. Есть масса интереснейших вещей вокруг нас, которые мы можем увидеть с ее помощью.<span class="reviews__quote  reviews__quote--hidden">»</span>
               </p>
             </li>
           </ul>
@@ -419,7 +441,7 @@
           <polygon fill="#000000" points="297.64,61.905 0,0 595.28,0 "/>
         </svg>
         <div class="map__inner  map__inner--responsive">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104370521!2d30.32088925162676!3d59.93879418178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1474999351518" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1475521128357" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -487,6 +509,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/adaptive-menu.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

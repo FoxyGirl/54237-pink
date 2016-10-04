@@ -14,7 +14,7 @@
   padding-top: 18px;
   padding-right: $indent-help;
   padding-left: $indent-help;
-  font-family: "OpenSans Light";
+  font-family: $font-family-light;
   text-align: center;
   font-size: 24px;
 
@@ -34,6 +34,15 @@
 
 .contacts__list {
   @include ul-clear;
+  margin-bottom: 30px;
+
+  @include respond(tablet) {
+    margin-bottom: 25px;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__item {

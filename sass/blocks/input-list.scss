@@ -9,12 +9,12 @@
 
   &--correct {
     @include respond(tablet) {
-      padding-right: 15px;
+      padding-right: 11px;
       padding-left: 20px;
     }
 
     @include respond(desktop) {
-      padding-right: 55px;
+      padding-right: 60px;
       padding-left: 0px;
     }
   }
@@ -23,8 +23,8 @@
     text-align: center;
     margin-bottom: 30px;
 
-    @incude respond(tablet) {
-      margin-bottom: 20px;
+    @include respond(tablet) {
+      margin-bottom: 66px;
     }
   }
 }
@@ -44,6 +44,7 @@
     text-align: left;
 
     @include respond(tablet) {
+      margin-bottom: 14px;
       border-bottom: 1px solid rgba($brand-color, 0.1);
     }
   }
