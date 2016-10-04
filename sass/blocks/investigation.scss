@@ -85,15 +85,13 @@
   }
 }
 
-/*
-.investigation__break {
-  display: block;
+.investigation__content {
+  margin-left: 310px;
 
   @include respond(desktop) {
-    display: inline;
+    margin-left: 365px;
   }
 }
-*/
 
 .investigation__text {
   margin-top: 0;
