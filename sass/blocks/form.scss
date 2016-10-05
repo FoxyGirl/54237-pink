@@ -124,7 +124,7 @@
       margin-bottom: 65px;
 
       .form__legend {
-        min-width: 320px;
+        min-width: 330px;
       }
 
       .form__item:last-child {
@@ -203,7 +203,7 @@
       margin-bottom: 65px;
 
       .form__legend {
-        min-width: 375px;
+        min-width: 380px;
       }
     }
 
@@ -269,6 +269,16 @@
 
     &:last-child {
       padding-right: 0;
+    }
+  }
+
+  @include respond(tablet) {
+    &:last-child {
+      .form__item:last-child {
+        .form__label--checkbox {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
