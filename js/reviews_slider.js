@@ -1,8 +1,10 @@
 ;(function() {
   'use strict';
 
-  var reviewsSlider = document.getElementById('reviewsSlider'),
-    sliderContent = reviewsSlider.getElementsByClassName('reviews__item'),
+  var reviewsSlider = document.getElementById('reviewsSlider');
+  if (!reviewsSlider) { return };
+
+  var sliderContent = reviewsSlider.getElementsByClassName('reviews__item'),
     controlBlock = reviewsSlider.querySelector('.slider__toggles'),
     sliderControls = controlBlock.getElementsByTagName('i'),
     prevSlide = reviewsSlider.querySelector('.reviews__item--active'),

@@ -136,8 +136,6 @@
     font-size: 14px;
     text-transform: uppercase;
     color: $light-color;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 
     @include respond(desktop) {
