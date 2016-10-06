@@ -20,6 +20,23 @@
   }
 }
 
+.price__decorator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 30px;
+
+  @include respond(tablet-only) {
+    height: 55px;
+  }
+
+  @include respond(desktop) {
+    height: 80px;
+  }
+}
+
 .price__inner {
   @include container;
 

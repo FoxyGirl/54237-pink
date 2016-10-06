@@ -11,14 +11,16 @@
 .investigation__inner {
   @include container;
 
-  @include respond(tablet-only) {
-    padding-top: 60px;
-    padding-bottom: 50px;
-  }
+  &.investigation__inner--timer {
+    @include respond(tablet-only) {
+      padding-top: 60px;
+      padding-bottom: 50px;
+    }
 
-  @include respond(desktop) {
-    padding-top: 10px;
-    padding-bottom: 70px;
+    @include respond(desktop) {
+      padding-top: 10px;
+      padding-bottom: 70px;
+    }
   }
 }
 

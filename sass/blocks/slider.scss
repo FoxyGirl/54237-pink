@@ -11,6 +11,16 @@
 .slider__toggles {
   padding: 10px;
   text-align: center;
+
+  &--gray {
+    .slider__toggle {
+      border-color: $light-gray-color;
+
+      &--active {
+        border-color: $brand-color;
+      }
+    }
+  }
 }
 
 .slider__toggle {
@@ -18,9 +28,10 @@
   vertical-align: top;
   width: 6px;
   height: 6px;
-  margin: 10px 9px;
+  margin: 6px 5px;
   background-color: rgba($brand-color, 0.3);
   border-radius: 50%;
+  border: 3px solid $light-color;
   cursor: pointer;
 
   &:hover {
@@ -33,7 +44,7 @@
 
   &--active {
     background-color: $light-color;
-    box-shadow: 0 0 0 3px $brand-color;
+    border-color: $brand-color;
   }
 }
 

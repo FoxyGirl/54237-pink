@@ -39,17 +39,10 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("my_scripts", function() {
+gulp.task("scripts", function() {
   return gulp.src(["!js/picturefill.min.js", "js/*.js"])
     .pipe(concat("scripts.min.js"))
     .pipe(uglify())
-    .pipe(gulp.dest("build/js"));
-});
-
-gulp.task("script", function() {
-  return gulp.src("build/js/scripts.js")
-    .pipe(uglify())
-    .pipe(rename("scripts.min.js"))
     .pipe(gulp.dest("build/js"));
 });
 
@@ -103,7 +96,7 @@ gulp.task("build", function(fn) {
     "copy",
     "style",
     "images",
-    "my_scripts",
+    "scripts",
     fn
   );
 });

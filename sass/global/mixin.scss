@@ -91,9 +91,9 @@
     (min-width: $bp-medium) and (min-resolution: 1.5dppx) { @content; }
   }
 
-    // for desktop viewports (from 1040px and bigger)
+    // for desktop viewports (from 1201px and bigger)
   @else if $media == desktop-all {
-    @media only screen and (min-width: $bp-large + 1) { @content; }
+    @media only screen and (min-width: $bp-xlarge + 1) { @content; }
   }
 
 }
