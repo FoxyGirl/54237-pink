@@ -75,8 +75,8 @@
     height: 280px;
     z-index: 2;
     background: transparent url("../img/iphone-screen-mobile@1x.png") center 0 no-repeat;
-    -webkit-background-size: 157 auto;
-    background-size: 157 auto;
+    -webkit-background-size: 157px auto;
+    background-size: 157px auto;
 
     @include respond(mobile-retina) {
       background-image: url("../img/iphone-screen-mobile@2x.png");
