@@ -24,14 +24,20 @@ img {
 .show-span {
   display: none;
 
-  &--desktop {
-    @include respond(desktop) {
+  &--mobile {
+    @include respond(mobile) {
       display: inline;
     }
   }
 
-  &--mobile {
-    @include respond(mobile) {
+  &--tablet {
+    @include respond(tablet) {
+      display: inline;
+    }
+  }
+
+  &--desktop {
+    @include respond(desktop) {
       display: inline;
     }
   }

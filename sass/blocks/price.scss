@@ -75,7 +75,6 @@
 }
 
 .price__table {
-
   @include respond(mobile) {
     position: absolute;
     left: -260px;
