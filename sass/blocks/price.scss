@@ -64,6 +64,14 @@
       display: block;
     }
   }
+
+  &.slider--no-js {
+    overflow: auto;
+
+    .price__table {
+      left: 0;
+    }
+  }
 }
 
 .price__table {

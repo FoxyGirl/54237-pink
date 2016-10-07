@@ -1,6 +1,20 @@
 .slider {
   position: relative;
   overflow: hidden;
+
+  &--no-js {
+    & ~ .slider__toggles,
+    & ~ .slider__controls {
+      display: none;
+    }
+
+    &.price__content {
+      .slider__toggles {
+        display: none;
+        background-color:yellow;
+      }
+    }
+  }
 }
 
 .slider__item {
