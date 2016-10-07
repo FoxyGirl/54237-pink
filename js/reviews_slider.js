@@ -4,6 +4,11 @@
   var reviewsSlider = document.getElementById('reviewsSlider');
   if (!reviewsSlider) { return };
 
+  var sliders = document.querySelectorAll(".slider");
+  for (var i=0; i < sliders.length; i++) {
+    sliders[i].classList.remove("slider--no-js");
+  };
+
   var sliderContent = reviewsSlider.getElementsByClassName('reviews__item'),
     controlBlock = reviewsSlider.querySelector('.slider__toggles'),
     sliderControls = controlBlock.getElementsByTagName('i'),

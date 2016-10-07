@@ -37,21 +37,6 @@ img {
   }
 }
 
-.triangle-top {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  height: auto;
-
-  &--white {
-    polygon {
-      fill: $light-color;
-    }
-  }
-}
-
 @keyframes color_change {
   0% {
     color: rgba($light-color, 0.3);

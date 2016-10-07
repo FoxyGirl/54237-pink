@@ -1,19 +1,44 @@
 .pop-up {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 20;
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto 30px;
   text-align: center;
   box-shadow: 0 7px 25px rgba(0,0,0,0.25);
+  background-color: $light-color;
 
-  @include respond(tablet) {
-    width: 460px;
+  &.show {
+    display: block;
+  }
 
-    .btn--submit {
-      min-width: 300px;
+  &--failure {
+    width: 320px;
+
+    @include respond(mobile) {
+      .btn--submit {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include respond(tablet) {
+      width: 460px;
+
+      .btn--submit {
+        min-width: 300px;
+      }
     }
   }
 
   &--success {
+    width: 320px;
+
+    @include respond(tablet) {
+      width: 460px;
+    }
+
     @include respond(desktop) {
       width: 780px;
 
@@ -23,6 +48,10 @@
     }
 
     .pop-up__inner {
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-bottom: 0;
+
       @include respond(desktop) {
         padding-right: 180px;
         padding-left: 180px;
