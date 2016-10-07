@@ -155,6 +155,7 @@
 
   @include respond(desktop) {
     display: inline-block;
+    vertical-align: top;
     margin-right: 20px;
     margin-left: 20px;
 

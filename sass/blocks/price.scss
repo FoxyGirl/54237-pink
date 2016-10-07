@@ -75,7 +75,6 @@
 }
 
 .price__table {
-
   @include respond(mobile) {
     position: absolute;
     left: -260px;
@@ -177,6 +176,7 @@
 
   @include respond(tablet-only) {
     display: inline-block;
+    vertical-align: top;
     font-size: 16px;
     margin-bottom: 5px;
   }
