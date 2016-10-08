@@ -43,6 +43,11 @@
 
 @mixin respond($media) {
 
+  // for generic mobile viewports (width  to 320px)
+  @if $media == mobile-small {
+    @media only screen and (max-width: $bp-xsmall) { @content; }
+  }
+
   // for generic mobile viewports (width  to 659px)
   @if $media == mobile {
     @media only screen and (max-width: $bp-small - 1) { @content; }
