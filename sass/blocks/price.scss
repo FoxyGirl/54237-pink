@@ -74,11 +74,27 @@
   }
 }
 
+.price__helper {
+  position: absolute;
+  width: 840px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include respond(tablet) {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+}
+
 .price__table {
+  width: 100%;
+
   @include respond(mobile) {
-    position: absolute;
-    left: -260px;
-    width: 840px;
+
+    position: relative;
+    margin-left: -33.333%;
+    margin: 0 auto;
 
     th:first-child,
     td:first-child {

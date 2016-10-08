@@ -22,10 +22,19 @@
 
 .promo-hand__img {
   position: absolute;
-  right: 62px;
   bottom: 0;
   width: 258px;
   height: 286px;
+
+  @include respond(mobile-small) {
+    right: 62px;
+    transform: none;
+  }
+
+  @include respond(mobile) {
+    right: 50%;
+    transform: translateX(50%);
+  }
 
   @include respond(tablet-only) {
     width: 700px;
