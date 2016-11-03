@@ -8,8 +8,6 @@
     mainNavList = document.getElementById('mainNav'),
     pageHeader = document.querySelector('.page-header');
 
-  mainNav.classList.remove('main-nav--no-js');
-
   navToggler.addEventListener('click', function() {
     this.classList.toggle('main-nav__toggler--close');
     mainNavList.classList.toggle('main-nav__list--opened');

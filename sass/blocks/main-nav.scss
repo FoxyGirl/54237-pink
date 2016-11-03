@@ -13,22 +13,6 @@
       background-color: transparent;
     }
   }
-
-  &--no-js {
-    background-color: $brand-color;
-
-    @include respond(desktop) {
-      background-color: transparent;
-    }
-
-    .main-nav__toggler {
-      display: none;
-    }
-
-    .main-nav__list {
-      height: auto;
-    }
-  }
 }
 
 .main-nav__toggler {
@@ -209,5 +193,31 @@
         }
       }
     }
+  }
+}
+
+.no-js {
+  .main-nav {
+    background-color: $brand-color;
+
+    @include respond(desktop) {
+      background-color: transparent;
+    }
+
+    .main-nav__toggler {
+      display: none;
+    }
+
+    .main-nav__list {
+      height: auto;
+    }
+  }
+
+  .main-nav__toggler {
+    display: none;
+  }
+
+  .main-nav__list {
+    height: auto;
   }
 }

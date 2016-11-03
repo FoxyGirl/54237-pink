@@ -44,6 +44,20 @@
   }
 }
 
+.no-js {
+  .page-header {
+    background-position: center 255px;
+
+    @include respond(tablet) {
+      background-position: center 250px;
+    }
+
+    @include respond(desktop) {
+      background-position: top center;
+    }
+  }
+}
+
 .page-header__up {
   @include clearfix;
   background-color: rgba($dark-color, 0.3);
